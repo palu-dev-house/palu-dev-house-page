@@ -1,0 +1,51 @@
+{
+  "name": "Palu Dev House",
+  "short_name": "PaluDev",
+  "description": "Tech House dari Indonesia yang membangun tools dan aplikasi SaaS untuk membantu bisnis dan menyebarkan penggunaan teknologi di seluruh Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2065A1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "id-ID",
+  "categories": ["business", "productivity", "technology", "developer"],
+  "icons": [
+    {
+      "src": "/icons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/logo-white.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Palu Dev House - Tech House dari Indonesia"
+    }
+  ]
+}

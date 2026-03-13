@@ -1,0 +1,65 @@
+{
+  "name": "palu-dev-house",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run prebuild:cache && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "setup:env": "./scripts/setup-env.sh",
+    "setup:dev": "node scripts/setup-dev-env.js",
+    "prebuild": "npm run docs:generate && node scripts/prebuild-seo.js",
+    "prebuild:cache": "node scripts/cache-busting-prebuild.ts",
+    "prebuild:prod": "npm run docs:generate && node scripts/prebuild-seo.js --base-url https://paludevhouse.site",
+    "prebuild:staging": "npm run docs:generate && node scripts/prebuild-seo.js --base-url https://staging.paludevhouse.id",
+    "prebuild:dry-run": "npm run docs:generate && node scripts/prebuild-seo.js --dry-run --verbose",
+    "build:full": "npm run prebuild && npm run build",
+    "build:full:prod": "npm run prebuild:prod && npm run build",
+    "docs:generate": "node scripts/generate-api-docs.js",
+    "docs:serve": "python -m http.server 8080 --directory public/docs/api",
+    "isr": "node scripts/isr-trigger.js --all",
+    "isr:pages": "node scripts/isr-trigger.js --pages",
+    "isr:dry-run": "node scripts/isr-trigger.js --dry-run --verbose",
+    "build:isr": "npm run prebuild && npm run isr && npm run build",
+    "scan:assets": "node scripts/scan-assets.js",
+    "convert-images": "node scripts/convert-images.js --force",
+    "convert-images:dry-run": "node scripts/convert-images.js",
+    "cleanup:png": "node scripts/convert-images.js --force --cleanup"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/sqlite3": "^3.1.11",
+    "better-sqlite3": "^12.6.2",
+    "framer-motion": "^12.36.0",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.577.0",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "speakeasy": "^2.0.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/speakeasy": "^2.0.10",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}

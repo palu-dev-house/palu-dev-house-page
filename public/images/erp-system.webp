@@ -1,0 +1,8 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F3F4F6"/>
+  <rect x="50" y="50" width="700" height="500" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <rect x="100" y="100" width="600" height="60" fill="#4F46E5"/>
+  <rect x="100" y="200" width="280" height="300" fill="#E5E7EB"/>
+  <rect x="420" y="200" width="280" height="300" fill="#E5E7EB"/>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="24" fill="#374151" text-anchor="middle" dy=".3em">ERP System</text>
+</svg>
