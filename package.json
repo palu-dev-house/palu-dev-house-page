@@ -2,10 +2,9 @@
   "name": "palu-dev-house",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run prebuild:cache && next build",
     "start": "next start",
     "lint": "eslint",
     "setup:env": "./scripts/setup-env.sh",
