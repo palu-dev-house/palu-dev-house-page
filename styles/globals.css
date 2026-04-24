@@ -6,7 +6,7 @@
   --color-brand: #2065A1;
   --color-brand-light: #EDF4F8;
   --color-ink: #0A0A0A;
-  --color-ink-muted: #525252;
+  --color-ink-muted: #404040;
   --color-surface: #FFFFFF;
   --color-surface-muted: #F7F7F8;
   --color-line: #E5E5E5;
@@ -16,10 +16,10 @@
   --color-brand: #4A8FCC;
   --color-brand-light: #0F2A42;
   --color-ink: #F7F7F8;
-  --color-ink-muted: #A3A3A3;
+  --color-ink-muted: #C4C4C4;
   --color-surface: #0A0A0A;
   --color-surface-muted: #171717;
-  --color-line: #262626;
+  --color-line: #2E2E2E;
 }
 
 html {

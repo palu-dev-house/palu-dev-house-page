@@ -10,19 +10,18 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#2065A1',
-          light: '#EDF4F8',
-          dark: '#4A8FCC',
+          DEFAULT: 'var(--color-brand)',
+          light: 'var(--color-brand-light)',
         },
         ink: {
-          DEFAULT: '#0A0A0A',
-          muted: '#525252',
+          DEFAULT: 'var(--color-ink)',
+          muted: 'var(--color-ink-muted)',
         },
         surface: {
-          DEFAULT: '#FFFFFF',
-          muted: '#F7F7F8',
+          DEFAULT: 'var(--color-surface)',
+          muted: 'var(--color-surface-muted)',
         },
-        line: '#E5E5E5',
+        line: 'var(--color-line)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
