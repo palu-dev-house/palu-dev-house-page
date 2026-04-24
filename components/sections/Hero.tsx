@@ -13,7 +13,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center rounded-full border border-line bg-surface-muted px-3 py-1 text-xs font-medium text-ink-muted"
           >
-            Software house untuk UMKM Indonesia
+            Software house Medan · Palu · Indonesia
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -21,7 +21,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight text-ink"
           >
-            Website & Aplikasi yang Bikin
+            Jasa Buat Web &amp; Aplikasi yang Bikin
             <br />
             <span className="text-brand">Bisnismu Naik Kelas</span>
           </motion.h1>
@@ -31,7 +31,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg text-ink-muted max-w-xl mx-auto"
           >
-            Dari landing page sampai aplikasi kasir & ERP. Hasil yang fokus pada yang penting: tambah transaksi, jangkau lebih banyak pelanggan.
+            Jasa buat web, aplikasi, sistem, dan program custom untuk UMKM di Medan, Palu, dan seluruh Indonesia. Landing page mulai Rp 150rb, aplikasi POS/ERP/booking mulai Rp 800rb — hasil yang naikin transaksi dan jangkauan pelanggan.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

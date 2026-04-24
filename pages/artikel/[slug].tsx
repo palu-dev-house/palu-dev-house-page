@@ -56,6 +56,7 @@ export default function ArticlePage({ article, related }: Props) {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.keywords} />
         <link rel="canonical" href={meta.canonical} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={meta.ogTitle} />

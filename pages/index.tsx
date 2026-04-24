@@ -10,23 +10,25 @@ import { Portfolio } from '@/components/sections/Portfolio';
 import { Pricing } from '@/components/sections/Pricing';
 import { FAQ } from '@/components/sections/FAQ';
 import { Contact } from '@/components/sections/Contact';
-import { buildMeta, localBusinessJsonLd, faqJsonLd } from '@/lib/seo';
+import { buildMeta, localBusinessJsonLd, webSiteJsonLd, faqJsonLd } from '@/lib/seo';
 import { faqItems } from '@/lib/faq';
 
 export default function Home() {
   const meta = buildMeta({
+    title: 'Jasa Buat Web & Aplikasi — Medan, Palu, Indonesia',
     description:
-      'Software house Indonesia untuk UMKM & bisnis yang mau naik kelas. Jasa landing page (technical SEO bundled) dari Rp 150rb, aplikasi kasir (POS), ERP, dan booking dari Rp 800rb dengan hosting server Indonesia.',
+      'Jasa buat web & jasa buat aplikasi Medan, Palu, seluruh Indonesia. Landing page mulai Rp 150rb (technical SEO bundled), aplikasi POS kasir, ERP, booking, dan jasa buat sistem custom mulai Rp 800rb. Hosting server Indonesia tersedia.',
     path: '/',
   });
 
-  const jsonLd = [localBusinessJsonLd(), faqJsonLd(faqItems)];
+  const jsonLd = [localBusinessJsonLd(), webSiteJsonLd(), faqJsonLd(faqItems)];
 
   return (
     <>
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.keywords} />
         <link rel="canonical" href={meta.canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.ogTitle} />
@@ -34,10 +36,13 @@ export default function Home() {
         <meta property="og:url" content={meta.canonical} />
         <meta property="og:image" content={meta.ogImage} />
         <meta property="og:locale" content="id_ID" />
+        <meta property="og:site_name" content="Palu Dev House" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.ogTitle} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.ogImage} />
+        <meta name="geo.region" content="ID" />
+        <meta name="geo.placename" content="Medan, Palu" />
         {jsonLd.map((obj, i) => (
           <script
             key={i}

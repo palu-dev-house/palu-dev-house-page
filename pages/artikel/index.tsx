@@ -8,9 +8,9 @@ import { buildMeta } from '@/lib/seo';
 
 export default function ArtikelIndex() {
   const meta = buildMeta({
-    title: 'Artikel & Panduan — Aplikasi, Website, Hosting, SEO',
+    title: 'Artikel Jasa Buat Web & Aplikasi — Panduan UMKM',
     description:
-      'Panduan lengkap tentang ERP, POS, landing page, static vs dynamic web, technical SEO, cara memilih server, dan rekomendasi hosting Indonesia untuk UMKM.',
+      'Panduan lengkap jasa buat web & jasa buat aplikasi untuk UMKM Indonesia: ERP, POS, landing page, static vs dynamic web, technical SEO, pilihan server & hosting Indonesia. Semua artikel gratis.',
     path: '/artikel',
   });
 
@@ -19,6 +19,7 @@ export default function ArtikelIndex() {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.keywords} />
         <link rel="canonical" href={meta.canonical} />
         <meta property="og:title" content={meta.ogTitle} />
         <meta property="og:description" content={meta.description} />

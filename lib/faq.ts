@@ -5,6 +5,14 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
+    question: 'Apakah Palu Dev House menerima jasa buat web untuk klien di Medan, Palu, atau luar kota?',
+    answer: 'Ya, kami melayani jasa buat web & jasa buat aplikasi untuk klien di Medan (Sumatera Utara), Palu (Sulawesi Tengah), dan seluruh Indonesia. Tim kami berbasis di 2 kota tersebut, tapi 90%+ proyek dikerjakan remote — meeting via Google Meet, delivery via email/WhatsApp. Untuk klien Medan & Palu, meeting offline bisa diatur kalau diperlukan.',
+  },
+  {
+    question: 'Berapa harga jasa buat web & jasa buat aplikasi di Palu Dev House?',
+    answer: 'Landing Page mulai Rp 150rb (sekali bayar, technical SEO bundled). Aplikasi web (POS/ERP/booking) mulai Rp 800rb + maintenance bulanan Rp 120rb–Rp 350rb tergantung paket. Jasa buat sistem custom atau program khusus mulai Rp 3.5jt. Semua harga transparan di halaman /harga — tidak ada biaya tersembunyi.',
+  },
+  {
     question: 'Berapa lama proses pembuatan website atau aplikasi?',
     answer: 'Landing Page Starter 5–7 hari kerja, Pro 10–14 hari. Web App Standard POS 3–4 minggu, Pro ERP 6–8 minggu. Setiap proyek akan dapat timeline detail setelah briefing awal.',
   },

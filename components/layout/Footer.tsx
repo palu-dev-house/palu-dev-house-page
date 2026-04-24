@@ -6,23 +6,65 @@ export function Footer() {
   return (
     <footer className="border-t border-line py-12 mt-section-sm">
       <Container>
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-5">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2">
               <img src="/logo.svg" alt="" width={32} height={32} className="h-8 w-8" />
               <span className="font-semibold text-ink">Palu Dev House</span>
             </div>
             <p className="mt-4 text-sm text-ink-muted max-w-sm">
-              Software house Indonesia untuk UMKM & bisnis yang mau naik kelas. Berbasis di Medan & Palu, melayani klien di seluruh Indonesia.
+              Software house Indonesia untuk UMKM & bisnis yang mau naik kelas. Jasa buat web &
+              aplikasi dari Medan, Palu, melayani seluruh Indonesia.
             </p>
           </div>
           <div>
             <h4 className="text-sm font-semibold text-ink">Layanan</h4>
             <ul className="mt-4 space-y-2 text-sm text-ink-muted">
-              <li><Link href="/#layanan" className="hover:text-ink">Landing Page</Link></li>
-              <li><Link href="/#layanan" className="hover:text-ink">Web Application</Link></li>
-              <li><Link href="/artikel" className="hover:text-ink">Artikel & Edukasi</Link></li>
-              <li><Link href="/harga" className="hover:text-ink">Harga Lengkap</Link></li>
+              <li>
+                <Link href="/#layanan" className="hover:text-ink">
+                  Landing Page
+                </Link>
+              </li>
+              <li>
+                <Link href="/#layanan" className="hover:text-ink">
+                  Web Application
+                </Link>
+              </li>
+              <li>
+                <Link href="/artikel" className="hover:text-ink">
+                  Artikel & Edukasi
+                </Link>
+              </li>
+              <li>
+                <Link href="/harga" className="hover:text-ink">
+                  Harga Lengkap
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-ink">Lokasi</h4>
+            <ul className="mt-4 space-y-2 text-sm text-ink-muted">
+              <li>
+                <Link href="/jasa-buat-web-medan" className="hover:text-ink">
+                  Jasa Buat Web Medan
+                </Link>
+              </li>
+              <li>
+                <Link href="/jasa-buat-aplikasi-medan" className="hover:text-ink">
+                  Jasa Buat Aplikasi Medan
+                </Link>
+              </li>
+              <li>
+                <Link href="/jasa-buat-web-palu" className="hover:text-ink">
+                  Jasa Buat Web Palu
+                </Link>
+              </li>
+              <li>
+                <Link href="/jasa-buat-aplikasi-palu" className="hover:text-ink">
+                  Jasa Buat Aplikasi Palu
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -30,7 +72,11 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-ink-muted">
               <li>Medan, Sumatera Utara</li>
               <li>Palu, Sulawesi Tengah</li>
-              <li><Link href="/#kontak" className="hover:text-ink">Hubungi via WhatsApp</Link></li>
+              <li>
+                <Link href="/#kontak" className="hover:text-ink">
+                  WhatsApp
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

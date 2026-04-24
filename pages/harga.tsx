@@ -9,9 +9,9 @@ import { buildMeta } from '@/lib/seo';
 
 export default function HargaPage() {
   const meta = buildMeta({
-    title: 'Harga Jasa Pembuatan Website & Aplikasi',
+    title: 'Harga Jasa Buat Web & Aplikasi — Medan, Palu, Indonesia',
     description:
-      'Daftar harga lengkap Palu Dev House: Landing Page mulai Rp 150rb (technical SEO bundled), Web Application (POS/ERP/Booking) mulai Rp 800rb + hosting server Indonesia. Add-ons dan opsi pembayaran transparan.',
+      'Harga jasa buat web & jasa buat aplikasi Palu Dev House: Landing Page mulai Rp 150rb (technical SEO bundled), Web Application (POS/ERP/Booking) mulai Rp 800rb + hosting server Indonesia. Add-ons domain & hosting transparan.',
     path: '/harga',
   });
 
@@ -20,6 +20,7 @@ export default function HargaPage() {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.keywords} />
         <link rel="canonical" href={meta.canonical} />
         <meta property="og:title" content={meta.ogTitle} />
         <meta property="og:description" content={meta.description} />
