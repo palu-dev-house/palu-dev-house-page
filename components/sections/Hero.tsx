@@ -31,7 +31,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg text-ink-muted max-w-xl mx-auto"
           >
-            Jasa buat web, aplikasi, sistem, dan program custom untuk UMKM di Medan, Palu, dan seluruh Indonesia. Landing page mulai Rp 150rb, aplikasi POS/ERP/booking mulai Rp 800rb — hasil yang naikin transaksi dan jangkauan pelanggan.
+            Jasa buat web, aplikasi, sistem, dan program custom untuk UMKM di Medan, Palu, dan seluruh Indonesia. Landing page mulai Rp 150rb, aplikasi POS/ERP/booking mulai Rp 4 juta dengan estimasi build 1 bulan penuh — hasil yang naikin transaksi dan jangkauan pelanggan.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

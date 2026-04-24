@@ -10,11 +10,11 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: 'Berapa harga jasa buat web & jasa buat aplikasi di Palu Dev House?',
-    answer: 'Landing Page mulai Rp 150rb (sekali bayar, technical SEO bundled). Aplikasi web (POS/ERP/booking) mulai Rp 800rb + maintenance bulanan Rp 120rb–Rp 350rb tergantung paket. Jasa buat sistem custom atau program khusus mulai Rp 3.5jt. Semua harga transparan di halaman /harga — tidak ada biaya tersembunyi.',
+    answer: 'Landing Page mulai Rp 150rb (sekali bayar, technical SEO bundled). Aplikasi web (POS/ERP/booking) mulai Rp 4 juta + maintenance bulanan Rp 150rb–Rp 500rb tergantung paket, estimasi build 1 bulan penuh. Jasa buat sistem custom atau program khusus mulai Rp 15 juta. Semua harga transparan di halaman /harga — tidak ada biaya tersembunyi.',
   },
   {
     question: 'Berapa lama proses pembuatan website atau aplikasi?',
-    answer: 'Landing Page Starter 5–7 hari kerja, Pro 10–14 hari. Web App Standard POS 3–4 minggu, Pro ERP 6–8 minggu. Setiap proyek akan dapat timeline detail setelah briefing awal.',
+    answer: 'Landing Page Starter 5–7 hari kerja, Pro 10–14 hari. Web App (POS/ERP/Booking) estimasi 1 bulan penuh untuk build & QA. Paket Enterprise 1–3 bulan tergantung scope. Setiap proyek akan dapat timeline detail setelah briefing awal.',
   },
   {
     question: 'Apakah harga sudah termasuk domain dan hosting?',

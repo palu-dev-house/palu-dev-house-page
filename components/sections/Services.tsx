@@ -14,7 +14,7 @@ const services = [
   {
     title: 'Web Application',
     subtitle: 'POS / ERP / Booking / Tuition',
-    bullets: ['Mulai Rp 800rb + maintenance', 'Proven di tokoninja & tuition-app', 'Multi-outlet ready', 'Hosting server Indonesia'],
+    bullets: ['Mulai Rp 4 juta + maintenance', 'Estimasi build 1 bulan penuh', 'Proven di tokoninja & tuition-app', 'Hosting server Indonesia'],
     href: '#harga',
   },
   {

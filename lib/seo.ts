@@ -98,7 +98,7 @@ export function localBusinessJsonLd() {
         addressCountry: 'ID',
       },
     ],
-    priceRange: 'Rp 150.000 – Rp 3.500.000+',
+    priceRange: 'Rp 150.000 – Rp 15.000.000+',
     knowsAbout: [
       'Jasa Buat Web',
       'Jasa Buat Aplikasi',
@@ -139,7 +139,7 @@ export function localBusinessJsonLd() {
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'IDR',
-            price: '800000',
+            price: '4000000',
           },
         },
         {
@@ -153,7 +153,7 @@ export function localBusinessJsonLd() {
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'IDR',
-            price: '3500000',
+            price: '15000000',
           },
         },
       ],

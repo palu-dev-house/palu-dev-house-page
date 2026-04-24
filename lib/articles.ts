@@ -64,7 +64,7 @@ export const articles: Article[] = [
         ],
         callout: {
           title: 'Pertimbangan biaya',
-          body: 'SaaS ERP biasanya Rp 200rb – 2jt/bulan per outlet. ERP custom Palu Dev House dari Rp 1.8 juta build + Rp 200rb/bulan hosting, tanpa fee per outlet.',
+          body: 'SaaS ERP biasanya Rp 200rb – 2jt/bulan per outlet. ERP custom Palu Dev House dari Rp 9 juta build (estimasi 1 bulan penuh) + Rp 300rb/bulan hosting, tanpa fee per outlet.',
         },
       },
     ],
@@ -121,7 +121,7 @@ export const articles: Article[] = [
     ],
     cta: {
       headline: 'Butuh POS yang sesuai bisnismu?',
-      body: 'Paket POS Palu Dev House mulai Rp 800rb + Rp 120rb/bulan termasuk hosting Indonesia. Konsultasi dulu untuk memastikan fit.',
+      body: 'Paket POS Palu Dev House mulai Rp 4 juta + Rp 150rb/bulan termasuk hosting Indonesia, estimasi build 1 bulan penuh. Konsultasi dulu untuk memastikan fit.',
     },
   },
   {

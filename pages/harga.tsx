@@ -11,7 +11,7 @@ export default function HargaPage() {
   const meta = buildMeta({
     title: 'Harga Jasa Buat Web & Aplikasi — Medan, Palu, Indonesia',
     description:
-      'Harga jasa buat web & jasa buat aplikasi Palu Dev House: Landing Page mulai Rp 150rb (technical SEO bundled), Web Application (POS/ERP/Booking) mulai Rp 800rb + hosting server Indonesia. Add-ons domain & hosting transparan.',
+      'Harga jasa buat web & jasa buat aplikasi Palu Dev House: Landing Page mulai Rp 150rb (technical SEO bundled), Web Application (POS/ERP/Booking) mulai Rp 4 juta dengan estimasi build 1 bulan penuh + hosting server Indonesia. Add-ons domain & hosting transparan.',
     path: '/harga',
   });
 

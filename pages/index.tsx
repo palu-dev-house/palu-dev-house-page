@@ -17,7 +17,7 @@ export default function Home() {
   const meta = buildMeta({
     title: 'Jasa Buat Web & Aplikasi — Medan, Palu, Indonesia',
     description:
-      'Jasa buat web & jasa buat aplikasi Medan, Palu, seluruh Indonesia. Landing page mulai Rp 150rb (technical SEO bundled), aplikasi POS kasir, ERP, booking, dan jasa buat sistem custom mulai Rp 800rb. Hosting server Indonesia tersedia.',
+      'Jasa buat web & jasa buat aplikasi Medan, Palu, seluruh Indonesia. Landing page mulai Rp 150rb (technical SEO bundled), aplikasi POS kasir, ERP, booking mulai Rp 4 juta (estimasi build 1 bulan penuh), dan jasa buat sistem custom mulai Rp 15 juta. Hosting server Indonesia tersedia.',
     path: '/',
   });
 

@@ -103,7 +103,7 @@ export function recommend(answers: QuizAnswers): Recommendation {
         headline: 'Paket yang cocok: Enterprise',
         reason:
           'Skala bisnis kamu sudah besar dan mau jangkau daerah baru. Paket Enterprise ideal untuk custom workflow, mobile app, dan integrasi API pihak ketiga.',
-        priceLabel: 'Mulai Rp 3.500.000 + Mulai Rp 350.000/bulan',
+        priceLabel: 'Mulai Rp 15.000.000 + Mulai Rp 500.000/bulan',
         scrollTo: 'pricing',
       };
     }
@@ -112,7 +112,7 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Pro ERP',
       reason:
         'Multi-outlet atau volume transaksi tinggi butuh sistem terpadu: inventory, staff, laporan analytics. Pro ERP jawab semua itu dalam satu dashboard — hosting server Indonesia sudah termasuk.',
-      priceLabel: 'Rp 1.800.000 + Rp 200.000/bulan',
+      priceLabel: 'Rp 9.000.000 + Rp 300.000/bulan',
       scrollTo: 'pricing',
     };
   }
@@ -123,7 +123,7 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Booking/Tuition App',
       reason:
         'Bisnis jasa atau edukasi paling butuh sistem booking online & notifikasi otomatis. Pelanggan bisa pesan tanpa chat manual, kamu fokus deliver.',
-      priceLabel: 'Rp 1.200.000 + Rp 150.000/bulan',
+      priceLabel: 'Rp 6.000.000 + Rp 200.000/bulan',
       scrollTo: 'pricing',
     };
   }
@@ -145,7 +145,7 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Standard POS/Kasir',
       reason:
         'Untuk cafe atau retail skala kamu, Standard POS sudah cukup: kasir digital, laporan otomatis, cetak struk. Bisa di-upgrade ke Pro ERP kalau bisnis berkembang.',
-      priceLabel: 'Rp 800.000 + Rp 120.000/bulan',
+      priceLabel: 'Rp 4.000.000 + Rp 150.000/bulan',
       scrollTo: 'pricing',
     };
   }

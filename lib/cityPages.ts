@@ -46,7 +46,7 @@ const sharedAppHighlights = [
   },
   {
     title: 'Maintenance Bulanan Fair',
-    body: 'Monthly fee Rp 120rb – Rp 350rb tergantung paket. Sudah include bug fix, minor update, dan hosting. Tidak ada fee tersembunyi per outlet atau per user.',
+    body: 'Monthly fee Rp 150rb – Rp 500rb tergantung paket. Sudah include bug fix, minor update, dan hosting. Tidak ada fee tersembunyi per outlet atau per user.',
   },
 ];
 
@@ -99,7 +99,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Bisa sekalian bikin aplikasi kasir atau ERP untuk bisnis di Medan?',
         answer:
-          'Bisa. Kami juga punya paket web application (POS/Kasir Rp 800rb, ERP Rp 1.8jt, Booking Rp 1.2jt) yang proven dipakai klien retail dan FnB di Sumatera Utara. Cek halaman Harga untuk detail.',
+          'Bisa. Kami juga punya paket web application (POS/Kasir Rp 4 juta, ERP Rp 9 juta, Booking Rp 6 juta — estimasi build 1 bulan penuh) yang proven dipakai klien retail dan FnB di Sumatera Utara. Cek halaman Harga untuk detail.',
       },
     ],
   },
@@ -110,7 +110,7 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'aplikasi',
     title: 'Jasa Buat Aplikasi Medan — POS, ERP, Booking',
     description:
-      'Jasa buat aplikasi Medan mulai Rp 800rb + hosting Indonesia. Aplikasi kasir (POS), ERP multi-outlet, booking online, dan sistem custom untuk UMKM, retail, FnB di Medan & Sumatera Utara.',
+      'Jasa buat aplikasi Medan mulai Rp 4 juta + hosting Indonesia, estimasi build 1 bulan penuh. Aplikasi kasir (POS), ERP multi-outlet, booking online, dan sistem custom untuk UMKM, retail, FnB di Medan & Sumatera Utara.',
     h1: 'Jasa Buat Aplikasi di Medan untuk UMKM & Bisnis Menengah',
     kicker: 'Medan · Sumatera Utara',
     intro:
@@ -136,7 +136,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Aplikasi kasir untuk cafe di Medan, harga berapa?',
         answer:
-          'Standard POS/Kasir Rp 800rb sekali bayar + Rp 120rb/bulan untuk hosting & maintenance. Cocok untuk single outlet. Kalau multi-outlet (misal cafe dengan 2–3 cabang di Medan), kami rekomendasi Pro ERP Rp 1.8jt + Rp 200rb/bulan.',
+          'Standard POS/Kasir Rp 4 juta sekali bayar + Rp 150rb/bulan untuk hosting & maintenance, estimasi build 1 bulan penuh. Cocok untuk single outlet. Kalau multi-outlet (misal cafe dengan 2–3 cabang di Medan), kami rekomendasi Pro ERP Rp 9 juta + Rp 300rb/bulan.',
       },
       {
         question: 'Aplikasinya bisa diakses dari HP?',
@@ -151,7 +151,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Bisa custom workflow sesuai bisnis saya di Medan?',
         answer:
-          'Paket Enterprise (mulai Rp 3.5jt) memang dibangun dari nol sesuai workflow kamu — misal sistem komisi unik, integrasi supplier lokal, atau alur approval yang spesifik. Kami briefing dulu, mapping proses, lalu build.',
+          'Paket Enterprise (mulai Rp 15 juta, estimasi build 1–3 bulan tergantung scope) memang dibangun dari nol sesuai workflow kamu — misal sistem komisi unik, integrasi supplier lokal, atau alur approval yang spesifik. Kami briefing dulu, mapping proses, lalu build.',
       },
     ],
   },
@@ -203,7 +203,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Kalau butuh aplikasi kasir atau booking, bisa sekalian?',
         answer:
-          'Bisa. Kami juga melayani jasa buat aplikasi di Palu — POS kasir Rp 800rb + Rp 120rb/bulan, ERP multi-outlet Rp 1.8jt + Rp 200rb/bulan, booking online Rp 1.2jt + Rp 150rb/bulan. Semua hosting server Indonesia.',
+          'Bisa. Kami juga melayani jasa buat aplikasi di Palu — POS kasir Rp 4 juta + Rp 150rb/bulan, ERP multi-outlet Rp 9 juta + Rp 300rb/bulan, booking online Rp 6 juta + Rp 200rb/bulan. Semua estimasi build 1 bulan penuh, hosting server Indonesia.',
       },
     ],
   },
@@ -214,7 +214,7 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'aplikasi',
     title: 'Jasa Buat Aplikasi Palu — POS, ERP, Sistem Custom',
     description:
-      'Jasa buat aplikasi Palu mulai Rp 800rb + hosting Indonesia. POS kasir, ERP, booking, dan jasa buat sistem custom untuk UMKM, cafe, retail, klinik, kursus di Palu & Sulawesi Tengah.',
+      'Jasa buat aplikasi Palu mulai Rp 4 juta + hosting Indonesia, estimasi build 1 bulan penuh. POS kasir, ERP, booking, dan jasa buat sistem custom untuk UMKM, cafe, retail, klinik, kursus di Palu & Sulawesi Tengah.',
     h1: 'Jasa Buat Aplikasi di Palu — Sistem Custom untuk Bisnis Lokal',
     kicker: 'Palu · Sulawesi Tengah',
     intro:
@@ -240,12 +240,12 @@ export const cityPages: CityPage[] = [
       {
         question: 'Harga jasa buat aplikasi kasir di Palu berapa?',
         answer:
-          'Standard POS/Kasir Rp 800rb sekali bayar + Rp 120rb/bulan (hosting + maintenance). Untuk multi-outlet atau fitur lebih kompleks, Pro ERP Rp 1.8jt + Rp 200rb/bulan. Booking/Tuition App Rp 1.2jt + Rp 150rb/bulan.',
+          'Standard POS/Kasir Rp 4 juta sekali bayar + Rp 150rb/bulan (hosting + maintenance), estimasi build 1 bulan penuh. Untuk multi-outlet atau fitur lebih kompleks, Pro ERP Rp 9 juta + Rp 300rb/bulan. Booking/Tuition App Rp 6 juta + Rp 200rb/bulan.',
       },
       {
         question: 'Aplikasinya bisa dipakai offline?',
         answer:
-          'Web application kami butuh internet. Untuk Enterprise (mulai Rp 3.5jt), kami juga sediakan mobile app native yang bisa offline mode + sync saat online — cocok untuk daerah dengan sinyal ga stabil.',
+          'Web application kami butuh internet. Untuk Enterprise (mulai Rp 15 juta), kami juga sediakan mobile app native yang bisa offline mode + sync saat online — cocok untuk daerah dengan sinyal ga stabil.',
       },
       {
         question: 'Ada garansi setelah aplikasi launch?',
@@ -255,7 +255,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Kalau mau custom sistem atau program khusus bisa?',
         answer:
-          'Bisa — paket Enterprise mulai Rp 3.5jt khusus untuk custom workflow, integrasi API, atau mobile app. Kami briefing dulu, mapping proses bisnis kamu, baru build sesuai kebutuhan.',
+          'Bisa — paket Enterprise mulai Rp 15 juta (estimasi build 1–3 bulan tergantung scope) khusus untuk custom workflow, integrasi API, atau mobile app. Kami briefing dulu, mapping proses bisnis kamu, baru build sesuai kebutuhan.',
       },
     ],
   },
