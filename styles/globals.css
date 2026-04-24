@@ -48,3 +48,30 @@ body {
   background-color: var(--color-brand);
   color: #FFFFFF;
 }
+
+/* Scroll-FPS optimizations
+ * - content-visibility lets the browser skip layout/paint for offscreen sections
+ * - contain-intrinsic-size reserves layout space so the scrollbar doesn't jump
+ * - transform hint lifts the element to its own GPU layer
+ */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 600px;
+}
+
+.gpu-layer {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Prose tuning for article body */
+.prose-custom h2 {
+  scroll-margin-top: 5rem;
+}
+
+.prose-custom .lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+

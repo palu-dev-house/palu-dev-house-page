@@ -16,7 +16,7 @@ import { faqItems } from '@/lib/faq';
 export default function Home() {
   const meta = buildMeta({
     description:
-      'Software house Indonesia untuk UMKM & bisnis yang mau naik kelas. Jasa pembuatan website profesional, aplikasi kasir (POS), ERP, booking, dan SEO. Dari Rp 2 juta.',
+      'Software house Indonesia untuk UMKM & bisnis yang mau naik kelas. Jasa landing page (technical SEO bundled) dari Rp 150rb, aplikasi kasir (POS), ERP, dan booking dari Rp 800rb dengan hosting server Indonesia.',
     path: '/',
   });
 

@@ -69,7 +69,7 @@ export interface Recommendation {
   headline: string;
   reason: string;
   priceLabel: string;
-  scrollTo: 'pricing' | 'seo';
+  scrollTo: 'pricing';
 }
 
 export function recommend(answers: QuizAnswers): Recommendation {
@@ -81,8 +81,8 @@ export function recommend(answers: QuizAnswers): Recommendation {
         packageId: 'landing-starter',
         headline: 'Paket yang cocok: Landing Page Starter',
         reason:
-          'Bisnis kamu butuh presence digital yang profesional dulu. Landing Page Starter sudah cukup untuk bangun kepercayaan pelanggan dan tampil di Google.',
-        priceLabel: 'Rp 2.000.000',
+          'Bisnis kamu butuh presence digital yang profesional dulu. Landing Page Starter sudah cukup untuk bangun kepercayaan pelanggan dan tampil di Google — technical SEO sudah include di paket.',
+        priceLabel: 'Rp 150.000',
         scrollTo: 'pricing',
       };
     }
@@ -90,8 +90,8 @@ export function recommend(answers: QuizAnswers): Recommendation {
       packageId: 'landing-pro',
       headline: 'Paket yang cocok: Landing Page Pro',
       reason:
-        'Kamu belum punya presence digital dan mau jangkau pelanggan baru. Landing Page Pro punya SEO on-page dan bisa dipadukan dengan SEO bulanan supaya cepat naik di Google.',
-      priceLabel: 'Rp 4.500.000',
+        'Kamu belum punya presence digital dan mau jangkau pelanggan baru. Landing Page Pro punya technical SEO on-page, Google Analytics, dan schema markup supaya cepat naik di Google.',
+      priceLabel: 'Rp 225.000',
       scrollTo: 'pricing',
     };
   }
@@ -99,20 +99,20 @@ export function recommend(answers: QuizAnswers): Recommendation {
   if (q3 === 'C') {
     if (q4 === 'C') {
       return {
-        packageId: 'seo-dominate',
-        headline: 'Paket yang cocok: SEO Dominate',
+        packageId: 'webapp-enterprise',
+        headline: 'Paket yang cocok: Enterprise',
         reason:
-          'Skala bisnis kamu sudah besar dan mau jangkau nasional. SEO Dominate ideal untuk dapat visibility organic di banyak kota sekaligus.',
-        priceLabel: 'Rp 7.000.000/bulan',
-        scrollTo: 'seo',
+          'Skala bisnis kamu sudah besar dan mau jangkau daerah baru. Paket Enterprise ideal untuk custom workflow, mobile app, dan integrasi API pihak ketiga.',
+        priceLabel: 'Mulai Rp 3.500.000 + Mulai Rp 350.000/bulan',
+        scrollTo: 'pricing',
       };
     }
     return {
       packageId: 'webapp-erp',
       headline: 'Paket yang cocok: Pro ERP',
       reason:
-        'Multi-outlet atau volume transaksi tinggi butuh sistem terpadu: inventory, staff, laporan analytics. Pro ERP jawab semua itu dalam satu dashboard.',
-      priceLabel: 'Rp 18.000.000 + Rp 500.000/bulan',
+        'Multi-outlet atau volume transaksi tinggi butuh sistem terpadu: inventory, staff, laporan analytics. Pro ERP jawab semua itu dalam satu dashboard — hosting server Indonesia sudah termasuk.',
+      priceLabel: 'Rp 1.800.000 + Rp 200.000/bulan',
       scrollTo: 'pricing',
     };
   }
@@ -123,19 +123,19 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Booking/Tuition App',
       reason:
         'Bisnis jasa atau edukasi paling butuh sistem booking online & notifikasi otomatis. Pelanggan bisa pesan tanpa chat manual, kamu fokus deliver.',
-      priceLabel: 'Rp 12.000.000 + Rp 350.000/bulan',
+      priceLabel: 'Rp 1.200.000 + Rp 150.000/bulan',
       scrollTo: 'pricing',
     };
   }
 
   if ((q2 === 'B' || q2 === 'C') && (q4 === 'A' || q4 === 'C')) {
     return {
-      packageId: 'seo-growth',
-      headline: 'Paket yang cocok: SEO Growth',
+      packageId: 'landing-max',
+      headline: 'Paket yang cocok: Landing Page Max',
       reason:
-        'Kamu sudah punya website dan mau dapat lebih banyak pelanggan lewat Google. SEO Growth fokus naikin ranking untuk 15 keyword target + artikel bulanan.',
-      priceLabel: 'Rp 3.500.000/bulan',
-      scrollTo: 'seo',
+        'Kamu sudah punya website dan mau dapat lebih banyak pelanggan. Landing Page Max punya technical SEO lengkap, keyword research, JSON-LD schema, dan Core Web Vitals tuning.',
+      priceLabel: 'Rp 300.000',
+      scrollTo: 'pricing',
     };
   }
 
@@ -145,7 +145,7 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Standard POS/Kasir',
       reason:
         'Untuk cafe atau retail skala kamu, Standard POS sudah cukup: kasir digital, laporan otomatis, cetak struk. Bisa di-upgrade ke Pro ERP kalau bisnis berkembang.',
-      priceLabel: 'Rp 8.000.000 + Rp 250.000/bulan',
+      priceLabel: 'Rp 800.000 + Rp 120.000/bulan',
       scrollTo: 'pricing',
     };
   }
@@ -154,8 +154,8 @@ export function recommend(answers: QuizAnswers): Recommendation {
     packageId: 'landing-pro',
     headline: 'Paket yang cocok: Landing Page Pro',
     reason:
-      'Untuk bisnis kamu, mulai dari Landing Page Pro paling masuk akal: website profesional dengan SEO on-page, bisa di-expand ke aplikasi atau paket SEO bulanan nanti.',
-    priceLabel: 'Rp 4.500.000',
+      'Untuk bisnis kamu, mulai dari Landing Page Pro paling masuk akal: website profesional dengan technical SEO on-page, bisa di-expand ke aplikasi nanti kalau skala bertambah.',
+    priceLabel: 'Rp 225.000',
     scrollTo: 'pricing',
   };
 }

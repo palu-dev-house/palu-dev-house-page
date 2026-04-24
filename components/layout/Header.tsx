@@ -8,7 +8,7 @@ const navLinks = [
   { href: '/#layanan', label: 'Layanan' },
   { href: '/#rekomendasi', label: 'Rekomendasi' },
   { href: '/harga', label: 'Harga' },
-  { href: '/seo', label: 'SEO' },
+  { href: '/artikel', label: 'Artikel' },
   { href: '/#faq', label: 'FAQ' },
 ];
 
@@ -16,8 +16,22 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
+    let ticking = false;
+    let lastState = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const next = window.scrollY > 8;
+        if (next !== lastState) {
+          lastState = next;
+          setScrolled(next);
+        }
+        ticking = false;
+      });
+    };
+    // prime initial state without animation frame
+    setScrolled(window.scrollY > 8);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);

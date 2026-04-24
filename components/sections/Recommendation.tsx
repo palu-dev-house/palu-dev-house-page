@@ -113,7 +113,7 @@ export function Recommendation() {
                       Chat WhatsApp Sekarang
                     </ButtonLink>
                     <ButtonLink
-                      href={recommendation.scrollTo === 'seo' ? '/seo' : '#harga'}
+                      href="#harga"
                       variant="secondary"
                       size="lg"
                     >

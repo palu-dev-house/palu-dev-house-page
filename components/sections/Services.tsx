@@ -7,21 +7,21 @@ import { ButtonLink } from '../ui/Button';
 const services = [
   {
     title: 'Landing Page',
-    subtitle: 'Website profesional sekali bayar',
-    bullets: ['Dari Rp 2jt', 'Mobile-responsive', 'SEO-ready sejak awal', 'Domain + hosting included'],
+    subtitle: 'Landing page + technical SEO sekali bayar',
+    bullets: ['Mulai Rp 150rb', 'Mobile-first responsive', 'SEO on-page + schema', 'Meta tags + sitemap siap'],
     href: '#harga',
   },
   {
     title: 'Web Application',
     subtitle: 'POS / ERP / Booking / Tuition',
-    bullets: ['Dari Rp 8jt + maintenance', 'Proven di tokoninja & tuition-app', 'Multi-outlet ready', 'Custom workflow tersedia'],
+    bullets: ['Mulai Rp 800rb + maintenance', 'Proven di tokoninja & tuition-app', 'Multi-outlet ready', 'Hosting server Indonesia'],
     href: '#harga',
   },
   {
-    title: 'SEO Service',
-    subtitle: 'Dominasi hasil Google bulanan',
-    bullets: ['Dari Rp 1,5jt/bulan', 'Keyword research & tracking', 'Artikel + backlink building', 'Laporan transparan'],
-    href: '/seo',
+    title: 'Edukasi & Artikel',
+    subtitle: 'Panduan memilih aplikasi & hosting',
+    bullets: ['Panduan ERP/POS', 'Cara pilih server & hosting', 'Static vs dynamic web', 'Semuanya gratis'],
+    href: '/artikel',
   },
 ];
 

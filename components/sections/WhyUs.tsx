@@ -12,8 +12,8 @@ const reasons = [
     body: 'Ga ribet, ga lebay. Tampilan profesional yang bikin calon pelanggan percaya sejak detik pertama buka website kamu.',
   },
   {
-    title: 'SEO Sejak Hari Pertama',
-    body: 'Setiap website yang kami bangun sudah siap SEO — bukan sekedar online, tapi ditemukan. Opsi paket SEO bulanan untuk yang mau dominasi Google.',
+    title: 'Technical SEO Sejak Hari Pertama',
+    body: 'Setiap landing page include technical SEO — meta tags, schema, sitemap, Core Web Vitals tuning. Bukan sekedar online, tapi siap ditemukan di Google.',
   },
 ];
 

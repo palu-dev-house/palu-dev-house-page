@@ -11,7 +11,7 @@ export default function HargaPage() {
   const meta = buildMeta({
     title: 'Harga Jasa Pembuatan Website & Aplikasi',
     description:
-      'Daftar harga lengkap Palu Dev House: Landing Page dari Rp 2jt, Web Application (POS/ERP/Booking) dari Rp 8jt, SEO bulanan dari Rp 1,5jt. Add-ons dan opsi pembayaran transparan.',
+      'Daftar harga lengkap Palu Dev House: Landing Page mulai Rp 150rb (technical SEO bundled), Web Application (POS/ERP/Booking) mulai Rp 800rb + hosting server Indonesia. Add-ons dan opsi pembayaran transparan.',
     path: '/harga',
   });
 

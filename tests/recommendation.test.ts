@@ -18,7 +18,7 @@ describe('recommendation engine', () => {
     expect(result.reason).toContain('profesional');
   });
 
-  it('recommends Landing Page Pro bundle for new biz wanting reach', () => {
+  it('recommends Landing Page Pro for new biz wanting reach', () => {
     const answers: QuizAnswers = { q1: 'B', q2: 'A', q3: 'A', q4: 'A' };
     const result = recommend(answers);
     expect(result.packageId).toBe('landing-pro');
@@ -44,16 +44,31 @@ describe('recommendation engine', () => {
     expect(recommend(eduAnswers).packageId).toBe('webapp-booking');
   });
 
-  it('recommends SEO Growth when business already has site and wants reach', () => {
+  it('recommends Landing Page Max when existing site wants more reach', () => {
     const answers: QuizAnswers = { q1: 'B', q2: 'B', q3: 'B', q4: 'A' };
     const result = recommend(answers);
-    expect(result.packageId).toBe('seo-growth');
+    expect(result.packageId).toBe('landing-max');
   });
 
-  it('recommends SEO Dominate for high-transaction biz wanting nationwide reach', () => {
+  it('recommends Enterprise for high-transaction biz wanting new regions', () => {
     const answers: QuizAnswers = { q1: 'B', q2: 'C', q3: 'C', q4: 'C' };
     const result = recommend(answers);
-    expect(['seo-dominate', 'webapp-erp']).toContain(result.packageId);
+    expect(['webapp-enterprise', 'webapp-erp']).toContain(result.packageId);
+  });
+
+  it('never returns a legacy SEO package id', () => {
+    const q1Opts = ['A', 'B', 'C', 'D', 'E'] as const;
+    const q2Opts = ['A', 'B', 'C'] as const;
+    const q3Opts = ['A', 'B', 'C'] as const;
+    const q4Opts = ['A', 'B', 'C', 'D'] as const;
+    for (const q1 of q1Opts)
+      for (const q2 of q2Opts)
+        for (const q3 of q3Opts)
+          for (const q4 of q4Opts) {
+            const result = recommend({ q1, q2, q3, q4 });
+            expect(result.packageId).not.toMatch(/^seo-/);
+            expect(result.scrollTo).toBe('pricing');
+          }
   });
 
   it('returns a valid package for every combination of answers', () => {

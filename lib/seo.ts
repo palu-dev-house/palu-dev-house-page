@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://paludevhouse.site';
 export const SITE_NAME = 'Palu Dev House';
 export const DEFAULT_DESCRIPTION =
-  'Software house untuk UMKM & bisnis Indonesia. Jasa pembuatan website, aplikasi kasir (POS), ERP, dan SEO. Minimalis, profesional, hasil yang naikin transaksi.';
+  'Software house untuk UMKM & bisnis Indonesia. Jasa pembuatan landing page (dengan technical SEO), aplikasi kasir (POS), ERP, dan booking. Minimalis, profesional, hasil yang naikin transaksi.';
 
 export interface MetaInput {
   title?: string;
@@ -48,7 +48,7 @@ export function localBusinessJsonLd() {
       { '@type': 'PostalAddress', addressLocality: 'Palu', addressRegion: 'Sulawesi Tengah', addressCountry: 'ID' },
       { '@type': 'PostalAddress', addressLocality: 'Medan', addressRegion: 'Sumatera Utara', addressCountry: 'ID' },
     ],
-    priceRange: 'Rp 1.500.000 – Rp 35.000.000+',
+    priceRange: 'Rp 150.000 – Rp 3.500.000+',
   };
 }
 
