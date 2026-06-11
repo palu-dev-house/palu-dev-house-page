@@ -81,8 +81,8 @@ export function recommend(answers: QuizAnswers): Recommendation {
         packageId: 'landing-starter',
         headline: 'Paket yang cocok: Landing Page Starter',
         reason:
-          'Bisnis kamu butuh presence digital yang profesional dulu. Landing Page Starter sudah cukup untuk bangun kepercayaan pelanggan dan tampil di Google — technical SEO sudah include di paket.',
-        priceLabel: 'Rp 150.000',
+          'Bisnis kamu butuh presence digital yang profesional dulu. Landing Page Starter sudah cukup untuk bangun kepercayaan pelanggan dan tampil di Google — technical SEO + fondasi GEO sudah include di paket.',
+        priceLabel: 'Rp 300.000',
         scrollTo: 'pricing',
       };
     }
@@ -91,7 +91,7 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Landing Page Pro',
       reason:
         'Kamu belum punya presence digital dan mau jangkau pelanggan baru. Landing Page Pro punya technical SEO on-page, Google Analytics, dan schema markup supaya cepat naik di Google.',
-      priceLabel: 'Rp 225.000',
+      priceLabel: 'Rp 400.000',
       scrollTo: 'pricing',
     };
   }
@@ -133,8 +133,8 @@ export function recommend(answers: QuizAnswers): Recommendation {
       packageId: 'landing-max',
       headline: 'Paket yang cocok: Landing Page Max',
       reason:
-        'Kamu sudah punya website dan mau dapat lebih banyak pelanggan. Landing Page Max punya technical SEO lengkap, keyword research, JSON-LD schema, dan Core Web Vitals tuning.',
-      priceLabel: 'Rp 300.000',
+        'Kamu sudah punya website dan mau dapat lebih banyak pelanggan. Landing Page Max punya technical SEO + GEO lengkap, keyword & conversational query research, structured data penuh, akses AI crawler, dan Core Web Vitals tuning.',
+      priceLabel: 'Rp 500.000',
       scrollTo: 'pricing',
     };
   }

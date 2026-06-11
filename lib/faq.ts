@@ -10,7 +10,7 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: 'Berapa harga jasa buat web & jasa buat aplikasi di Palu Dev House?',
-    answer: 'Landing Page mulai Rp 150rb (sekali bayar, technical SEO bundled). Aplikasi web (POS/ERP/booking) mulai Rp 4 juta + maintenance bulanan Rp 150rb–Rp 500rb tergantung paket, estimasi build 1 bulan penuh. Jasa buat sistem custom atau program khusus mulai Rp 15 juta. Semua harga transparan di halaman /harga — tidak ada biaya tersembunyi.',
+    answer: 'Landing Page Rp 300rb (Starter), Rp 400rb (Pro), Rp 500rb (Max) — sekali bayar, technical SEO + GEO (Generative Engine Optimization) bundled. Harga belum termasuk domain; domain dibeli klien sendiri dan kami bantu setup. Aplikasi web (POS/ERP/booking) mulai Rp 4 juta + maintenance bulanan Rp 150rb–Rp 500rb tergantung paket, estimasi build 1 bulan penuh. Jasa buat sistem custom atau program khusus mulai Rp 15 juta. Semua harga transparan di halaman /harga — tidak ada biaya tersembunyi.',
   },
   {
     question: 'Berapa lama proses pembuatan website atau aplikasi?',
@@ -18,7 +18,15 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: 'Apakah harga sudah termasuk domain dan hosting?',
-    answer: 'Ya, semua paket Landing Page sudah include domain + hosting untuk 1 tahun pertama. Web App include hosting selama ada kontrak maintenance bulanan. Perpanjangan domain tahun ke-2: Rp 300rb/tahun.',
+    answer: 'Domain dibeli klien sendiri (atas nama kamu, jadi kepemilikan 100% di tangan kamu) — kami bantu carikan & setup, mulai Rp 30rb/tahun untuk .my.id sampai Rp 175rb–350rb/tahun untuk .com/.id. Hosting tersedia sebagai add-on (shared hosting Indonesia mulai Rp 300rb/tahun atau VPS). Harga paket Landing Page (Rp 300rb–500rb) sudah termasuk build + technical SEO + GEO, tapi di luar biaya domain & hosting. Web App include hosting selama ada kontrak maintenance bulanan.',
+  },
+  {
+    question: 'Apa itu GEO (Generative Engine Optimization) dan apakah sudah termasuk?',
+    answer: 'GEO (Generative Engine Optimization) adalah optimasi konten supaya bisnismu dikutip dan direkomendasikan AI seperti ChatGPT, Google Gemini, dan Perplexity — bukan cuma ranking di Google. GEO sudah bundled di paket Landing Page: mulai paket Pro (Rp 400rb) dapat GEO starter (llms.txt + struktur Q&A citable + schema FAQ/Article), dan paket Max (Rp 500rb) dapat GEO lengkap (structured data penuh, akses AI crawler seperti GPTBot/ClaudeBot/PerplexityBot/Google-Extended, konten citable, dan E-E-A-T signal).',
+  },
+  {
+    question: 'Apa bedanya SEO dan GEO?',
+    answer: 'SEO (Search Engine Optimization) bikin halamanmu ranking tinggi di hasil pencarian Google supaya orang klik. GEO (Generative Engine Optimization) bikin kontenmu dikutip langsung di dalam jawaban AI seperti ChatGPT, Gemini, dan Perplexity — sering tanpa klik sama sekali. Keduanya saling melengkapi, dan Palu Dev House sudah bundling keduanya di setiap paket Landing Page.',
   },
   {
     question: 'Bagaimana sistem pembayarannya?',

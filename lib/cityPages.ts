@@ -22,12 +22,12 @@ export interface CityPage {
 
 const sharedWebHighlights = [
   {
-    title: 'Landing Page + Technical SEO Bundled',
-    body: 'Setiap website yang kami bangun sudah include meta tags, schema, sitemap, Open Graph, dan Core Web Vitals tuning. Siap bersaing di halaman 1 Google sejak hari pertama.',
+    title: 'Landing Page + Technical SEO & GEO Bundled',
+    body: 'Setiap website yang kami bangun sudah include meta tags, schema, sitemap, Open Graph, Core Web Vitals tuning, plus GEO (llms.txt, structured data, konten citable) supaya dikutip ChatGPT/Gemini/Perplexity. Siap bersaing di halaman 1 Google sekaligus di jawaban AI sejak hari pertama.',
   },
   {
-    title: 'Harga Transparan Mulai Rp 150rb',
-    body: 'Bukan harga "hubungi untuk quote". Starter Rp 150rb, Pro Rp 225rb, Max Rp 300rb — semua build sekali bayar, dengan opsi hosting Indonesia sebagai add-on.',
+    title: 'Harga Transparan Mulai Rp 300rb',
+    body: 'Bukan harga "hubungi untuk quote". Starter Rp 300rb, Pro Rp 400rb, Max Rp 500rb — semua build sekali bayar. Harga belum termasuk domain (dibeli klien sendiri, kami bantu setup); hosting Indonesia tersedia sebagai add-on.',
   },
   {
     title: 'Mobile-First & Page Speed',
@@ -58,7 +58,7 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'web',
     title: 'Jasa Buat Web Medan — Landing Page & Technical SEO',
     description:
-      'Jasa buat web Medan mulai Rp 150rb. Landing page profesional dengan technical SEO bundled, mobile-first, form WhatsApp, dan hosting server Indonesia. Melayani UMKM & bisnis di Medan, Deli Serdang, Binjai.',
+      'Jasa buat web Medan mulai Rp 300rb. Landing page profesional dengan technical SEO + GEO bundled (dikutip ChatGPT/Gemini/Perplexity), mobile-first, form WhatsApp, dan opsi hosting server Indonesia. Melayani UMKM & bisnis di Medan, Deli Serdang, Binjai.',
     h1: 'Jasa Buat Web di Medan yang Fokus ke Hasil',
     kicker: 'Medan · Sumatera Utara',
     intro:
@@ -162,11 +162,11 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'web',
     title: 'Jasa Buat Web Palu — Landing Page Profesional',
     description:
-      'Jasa buat web Palu mulai Rp 150rb. Landing page profesional dengan technical SEO, mobile-first, form WhatsApp terintegrasi, dan hosting server Indonesia. Tim lokal Sulawesi Tengah.',
+      'Jasa buat web Palu mulai Rp 300rb. Landing page profesional dengan technical SEO + GEO (dikutip ChatGPT/Gemini/Perplexity), mobile-first, form WhatsApp terintegrasi, dan opsi hosting server Indonesia. Tim lokal Sulawesi Tengah.',
     h1: 'Jasa Buat Web di Palu — Software House Lokal',
     kicker: 'Palu · Sulawesi Tengah',
     intro:
-      'Bisnis di Palu butuh website tapi bingung mulai dari mana? Kami software house lokal yang paham pasar Sulawesi Tengah — dari warung kopi di Jalan Imam Bonjol sampai bisnis jasa di Kelurahan Lolu. Harga transparan mulai Rp 150rb, technical SEO bundled, meeting bisa offline kalau perlu.',
+      'Bisnis di Palu butuh website tapi bingung mulai dari mana? Kami software house lokal yang paham pasar Sulawesi Tengah — dari warung kopi di Jalan Imam Bonjol sampai bisnis jasa di Kelurahan Lolu. Harga transparan mulai Rp 300rb, technical SEO + GEO bundled, meeting bisa offline kalau perlu.',
     keywords: [
       'jasa buat web palu',
       'jasa buat website palu',
@@ -193,7 +193,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Berapa harga jasa buat web di Palu?',
         answer:
-          'Mulai Rp 150rb untuk Landing Page Starter, Rp 225rb untuk Pro, Rp 300rb untuk Max. Semua harga sudah include technical SEO (meta tags, schema, sitemap). Hosting Indonesia sebagai add-on (shared Rp 300rb/tahun atau VPS Rp 99rb/bulan).',
+          'Rp 300rb untuk Landing Page Starter, Rp 400rb untuk Pro, Rp 500rb untuk Max. Semua harga sudah include technical SEO + GEO (meta tags, schema, sitemap, llms.txt, structured data, konten citable untuk AI). Harga belum termasuk domain (dibeli klien sendiri, kami bantu setup); hosting Indonesia sebagai add-on (shared Rp 300rb/tahun atau VPS Rp 99rb/bulan).',
       },
       {
         question: 'Website bisnis Palu bisa muncul di Google Palu?',

@@ -2,7 +2,18 @@ export const SITE_URL = 'https://paludevhouse.site';
 export const SITE_NAME = 'Palu Dev House';
 
 export const DEFAULT_DESCRIPTION =
-  'Jasa buat web & jasa buat aplikasi di Medan, Palu, dan seluruh Indonesia. Spesialis landing page, aplikasi kasir (POS), ERP, booking, dan sistem custom untuk UMKM. Technical SEO bundled, hosting server Indonesia tersedia.';
+  'Jasa buat web & jasa buat aplikasi di Medan, Palu, dan seluruh Indonesia. Spesialis landing page, aplikasi kasir (POS), ERP, booking, dan sistem custom untuk UMKM. Technical SEO + GEO (Generative Engine Optimization) bundled — dikutip ChatGPT, Gemini & Perplexity. Hosting server Indonesia tersedia.';
+
+/**
+ * Resmi/social profiles for entity clarity & sameAs — a core GEO signal.
+ * AI engines use these to confirm we're a real, single entity. Update with
+ * real profile URLs as they go live.
+ */
+export const SOCIAL_PROFILES = [
+  'https://www.instagram.com/paludevhouse',
+  'https://www.linkedin.com/company/paludevhouse',
+  'https://github.com/palu-dev-house',
+];
 
 /**
  * Primary Indonesian keyword set we rank for — used as comma-separated meta
@@ -25,6 +36,9 @@ export const PRIMARY_KEYWORDS = [
   'software house palu',
   'jasa POS kasir',
   'jasa ERP UMKM',
+  'generative engine optimization',
+  'jasa GEO',
+  'GEO Indonesia',
 ];
 
 export interface MetaInput {
@@ -77,6 +91,7 @@ export function localBusinessJsonLd() {
     url: SITE_URL,
     image: `${SITE_URL}/og-image.svg`,
     logo: `${SITE_URL}/logo.svg`,
+    sameAs: SOCIAL_PROFILES,
     areaServed: [
       { '@type': 'City', name: 'Palu' },
       { '@type': 'City', name: 'Medan' },
@@ -98,7 +113,7 @@ export function localBusinessJsonLd() {
         addressCountry: 'ID',
       },
     ],
-    priceRange: 'Rp 150.000 – Rp 15.000.000+',
+    priceRange: 'Rp 300.000 – Rp 15.000.000+',
     knowsAbout: [
       'Jasa Buat Web',
       'Jasa Buat Aplikasi',
@@ -109,6 +124,8 @@ export function localBusinessJsonLd() {
       'POS Kasir',
       'ERP',
       'Technical SEO',
+      'Generative Engine Optimization',
+      'GEO',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -118,14 +135,14 @@ export function localBusinessJsonLd() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Jasa Buat Landing Page (Technical SEO Bundled)',
+            name: 'Jasa Buat Landing Page (Technical SEO + GEO Bundled)',
             areaServed: 'Indonesia',
             serviceType: 'Web Development',
           },
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'IDR',
-            price: '150000',
+            price: '300000',
           },
         },
         {
@@ -182,6 +199,42 @@ export function faqJsonLd(items: { question: string; answer: string }[]) {
       name: item.question,
       acceptedAnswer: { '@type': 'Answer', text: item.answer },
     })),
+  };
+}
+
+/**
+ * Dedicated Service schema for GEO — gives AI engines a clean, citable entity
+ * for "Generative Engine Optimization" tied to our brand, area, and price.
+ */
+export function geoServiceJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE_URL}#geo-service`,
+    name: 'Generative Engine Optimization (GEO)',
+    alternateName: ['GEO', 'Optimasi AI Search', 'AI Search Optimization'],
+    serviceType: 'Generative Engine Optimization',
+    description:
+      'Optimasi konten website supaya dikutip dan direkomendasikan AI answer engine seperti ChatGPT, Google Gemini/AI Overviews, Perplexity, dan Microsoft Copilot — lewat structured data, konten citable, llms.txt, entity clarity, dan akses AI crawler. Bundled di paket Landing Page Palu Dev House.',
+    provider: { '@id': `${SITE_URL}#business` },
+    areaServed: [
+      { '@type': 'City', name: 'Palu' },
+      { '@type': 'City', name: 'Medan' },
+      { '@type': 'Country', name: 'Indonesia' },
+    ],
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'IDR',
+      price: '400000',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'IDR',
+        minPrice: '300000',
+        maxPrice: '500000',
+      },
+      availability: 'https://schema.org/InStock',
+      url: `${SITE_URL}/#harga`,
+    },
   };
 }
 

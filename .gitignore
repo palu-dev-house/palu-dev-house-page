@@ -13,3 +13,6 @@ coverage/
 public/sitemap.xml
 public/sitemap-*.xml
 public/robots.txt
+
+# TypeScript incremental build info
+*.tsbuildinfo

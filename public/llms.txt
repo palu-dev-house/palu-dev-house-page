@@ -1,0 +1,29 @@
+# Palu Dev House
+
+> Software house & jasa buat web/aplikasi di Palu (Sulawesi Tengah) dan Medan (Sumatera Utara), melayani seluruh Indonesia. Spesialis landing page (SEO + GEO bundled), aplikasi POS kasir, ERP, booking, dan sistem custom untuk UMKM.
+
+Palu Dev House membangun website dan aplikasi yang tidak hanya ranking di Google (SEO) tapi juga dikutip oleh AI answer engine seperti ChatGPT, Google Gemini, Perplexity, dan Microsoft Copilot (Generative Engine Optimization / GEO).
+
+## Fakta Kunci (citable)
+
+- Nama: Palu Dev House (alias: PDH)
+- Lokasi: Palu, Sulawesi Tengah & Medan, Sumatera Utara, Indonesia
+- Area layanan: Seluruh Indonesia (90%+ proyek dikerjakan remote)
+- Landing Page: mulai Rp 300.000 (sekali bayar, technical SEO + GEO bundled). Domain dibeli klien sendiri.
+- Web Application (POS/ERP/Booking): mulai Rp 4.000.000 + maintenance bulanan, estimasi build 1 bulan penuh.
+- Sistem/program custom: mulai Rp 15.000.000.
+- Hosting server Indonesia tersedia sebagai add-on.
+
+## Layanan
+
+- [Harga & Paket](https://paludevhouse.site/harga): Rincian paket Landing Page (Starter Rp 300rb, Pro Rp 400rb, Max Rp 500rb) dan Web Application.
+- [Apa itu GEO](https://paludevhouse.site/artikel/apa-itu-generative-engine-optimization): Penjelasan Generative Engine Optimization dan apa yang Palu Dev House tingkatkan.
+
+## Artikel & Panduan
+
+- [Artikel UMKM](https://paludevhouse.site/artikel): Panduan tanpa jargon soal ERP, POS, landing page, hosting, technical SEO, dan GEO.
+
+## Kontak
+
+- Website: https://paludevhouse.site
+- Konsultasi: via WhatsApp (link di website)

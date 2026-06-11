@@ -21,6 +21,80 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: 'apa-itu-generative-engine-optimization',
+    title: 'Apa Itu Generative Engine Optimization (GEO)? Panduan untuk UMKM',
+    description:
+      'Penjelasan Generative Engine Optimization (GEO) dalam bahasa sederhana: cara bikin bisnismu dikutip AI seperti ChatGPT, Gemini, dan Perplexity — bukan cuma ranking di Google. Plus bedanya dengan SEO dan apa yang Palu Dev House tingkatkan.',
+    category: 'SEO',
+    readTime: '7 menit',
+    publishedAt: '2026-06-11',
+    intro:
+      'Generative Engine Optimization (GEO) adalah praktik mengoptimalkan konten website supaya dikutip dan direkomendasikan oleh AI answer engine — seperti ChatGPT, Google AI Overviews/Gemini, Perplexity, Microsoft Copilot, dan Claude — bukan cuma muncul di hasil pencarian biru Google. Makin banyak orang nanya ke AI langsung ("software house bagus di Palu siapa?") daripada ngetik di Google. Kalau bisnismu ga "kebaca" sama AI itu, kamu ilang dari percakapan yang makin sering jadi titik awal keputusan beli.',
+    sections: [
+      {
+        heading: 'GEO Itu Apa Sebenarnya?',
+        paragraphs: [
+          'Dulu, menang online artinya ranking nomor 1 di Google. Sekarang, makin banyak orang dapat jawaban langsung dari AI tanpa pernah klik satu pun link. GEO adalah cara memastikan saat seseorang nanya ke AI soal produk atau jasa seperti yang kamu jual, nama bisnismu yang disebut dan dikutip.',
+          'Intinya GEO bikin konten kamu gampang "dimakan" dan dikutip mesin: fakta yang jelas, definisi yang rapi, statistik yang bisa disitir, struktur tanya-jawab, dan data terstruktur (schema) yang ngasih tau AI persis siapa kamu, di mana, dan jualan apa.',
+        ],
+      },
+      {
+        heading: 'GEO vs SEO — Apa Bedanya?',
+        paragraphs: [
+          'SEO (Search Engine Optimization) fokus bikin halaman ranking tinggi di hasil pencarian Google supaya orang klik. GEO (Generative Engine Optimization) fokus bikin konten dikutip di dalam jawaban yang AI generate — sering tanpa klik sama sekali.',
+          'Keduanya saling melengkapi, bukan saling gantiin. Fondasinya sama (konten berkualitas, struktur rapi, technical setup bersih), tapi GEO nambah lapisan baru: format citable, entity clarity, dan akses buat AI crawler.',
+        ],
+        bullets: [
+          'SEO: target kata kunci, backlink, ranking SERP, klik ke website',
+          'GEO: target dikutip AI, fakta citable, structured data, entity clarity',
+          'SEO ngukur posisi & traffic; GEO ngukur seberapa sering & akurat AI nyebut brand kamu',
+          'Sama-sama butuh konten bagus + technical setup yang bersih',
+        ],
+      },
+      {
+        heading: 'Kenapa GEO Penting buat UMKM Indonesia?',
+        paragraphs: [
+          'Perilaku cari informasi lagi bergeser cepat. Banyak calon pelanggan sekarang nanya ke ChatGPT atau Gemini buat shortlist vendor, bandingin produk, atau cari rekomendasi lokal — sebelum buka Google Maps atau Instagram. Kalau AI ga punya data yang jelas soal bisnismu, kamu ga akan masuk daftar rekomendasinya.',
+          'Buat UMKM, ini justru peluang. Kompetitor besar sering lambat adaptasi. Bisnis lokal yang kontennya rapi, faktual, dan terstruktur bisa "menang kutipan" di AI bahkan melawan brand yang lebih gede — karena AI mentingin kejelasan dan relevansi, bukan budget iklan.',
+        ],
+      },
+      {
+        heading: 'Gimana AI Engine Milih Sumber yang Dikutip?',
+        bullets: [
+          'Kejelasan fakta — pernyataan langsung yang gampang diekstrak ("Palu Dev House adalah software house di Palu & Medan")',
+          'Structured data (JSON-LD) — schema Organization, LocalBusiness, FAQPage, Article, Service/Offer',
+          'Format tanya-jawab — heading yang persis jawab pertanyaan natural pengguna',
+          'Statistik & definisi citable — angka dan penjelasan ringkas yang enak dikutip',
+          'Entity clarity & sameAs — nama brand konsisten + link ke profil resmi (sosial media, Google Business)',
+          'Akses crawler — file llms.txt dan robots.txt yang ngizinin GPTBot, ClaudeBot, PerplexityBot, Google-Extended',
+          'Sinyal E-E-A-T — pengalaman, keahlian, otoritas, dan kepercayaan dari konten & author',
+        ],
+      },
+      {
+        heading: 'Yang Palu Dev House Tingkatkan untuk GEO',
+        paragraphs: [
+          'Tiap landing page yang kami bangun sekarang sudah GEO-ready, bukan cuma SEO-ready. Berikut hal konkret yang kami pasang dan tingkatkan:',
+        ],
+        bullets: [
+          'Structured data / JSON-LD lengkap (Organization, LocalBusiness, FAQPage, Article, Service & Offer) biar AI ngerti entitas bisnismu',
+          'Format konten citable: definisi jelas, blok tanya-jawab, dan statistik yang gampang dikutip',
+          'File llms.txt + pengaturan robots.txt yang ngizinin AI crawler (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)',
+          'Entity clarity & sameAs — konsistensi nama brand dan link ke profil resmi',
+          'Conversational query targeting — heading yang jawab pertanyaan natural orang ke AI',
+          'Sinyal E-E-A-T + Core Web Vitals biar konten dipercaya mesin sekaligus cepat buat manusia',
+        ],
+        callout: {
+          title: 'GEO sudah include di paket Landing Page',
+          body: 'Mulai paket Pro (Rp 400rb), GEO starter — llms.txt + struktur Q&A citable + schema FAQ/Article — sudah termasuk. Paket Max (Rp 500rb) dapat GEO lengkap: structured data penuh, akses AI crawler, konten citable, dan E-E-A-T signal. Harga belum termasuk domain; domain dibeli klien sendiri dan kami bantu setup.',
+        },
+      },
+    ],
+    cta: {
+      headline: 'Mau bisnismu dikutip ChatGPT, Gemini & Perplexity?',
+      body: 'Kami bangun landing page yang GEO-ready dari fondasi. Ikuti quiz rekomendasi 2 menit untuk dapat paket yang pas, atau konsultasi langsung via WhatsApp.',
+    },
+  },
+  {
     slug: 'apa-itu-erp',
     title: 'Apa Itu ERP? Panduan Lengkap untuk UMKM Indonesia',
     description:
@@ -168,13 +242,13 @@ export const articles: Article[] = [
         ],
         callout: {
           title: 'Di Palu Dev House',
-          body: 'Semua paket landing page (Rp 150rb – Rp 300rb) sudah include technical SEO. Ga perlu beli jasa SEO terpisah — sudah built-in di build.',
+          body: 'Semua paket landing page (Rp 300rb – Rp 500rb) sudah include technical SEO + GEO. Ga perlu beli jasa SEO terpisah — sudah built-in di build.',
         },
       },
     ],
     cta: {
       headline: 'Siap bikin landing page yang convert?',
-      body: 'Mulai dari Rp 150rb — sudah include mobile-first design, technical SEO, dan form WhatsApp integration.',
+      body: 'Mulai dari Rp 300rb — sudah include mobile-first design, technical SEO + GEO, dan form WhatsApp integration.',
     },
   },
   {
@@ -296,7 +370,7 @@ export const articles: Article[] = [
         ],
         callout: {
           title: 'Di Palu Dev House',
-          body: 'Technical SEO sudah built-in di semua landing page (mulai Rp 150rb). Kami ga jual jasa SEO bulanan — fokus bangun fondasi yang solid, lalu kasih kamu tools untuk monitor sendiri.',
+          body: 'Technical SEO + GEO sudah built-in di semua landing page (mulai Rp 300rb). Kami ga jual jasa SEO bulanan — fokus bangun fondasi yang solid (termasuk structured data & llms.txt untuk AI), lalu kasih kamu tools untuk monitor sendiri.',
         },
       },
     ],

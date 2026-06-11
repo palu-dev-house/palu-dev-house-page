@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { WhyDigital } from '@/components/sections/WhyDigital';
+import { GEO } from '@/components/sections/GEO';
 import { WhyUs } from '@/components/sections/WhyUs';
 import { Services } from '@/components/sections/Services';
 import { Recommendation } from '@/components/sections/Recommendation';
@@ -10,18 +11,18 @@ import { Portfolio } from '@/components/sections/Portfolio';
 import { Pricing } from '@/components/sections/Pricing';
 import { FAQ } from '@/components/sections/FAQ';
 import { Contact } from '@/components/sections/Contact';
-import { buildMeta, localBusinessJsonLd, webSiteJsonLd, faqJsonLd } from '@/lib/seo';
+import { buildMeta, localBusinessJsonLd, webSiteJsonLd, faqJsonLd, geoServiceJsonLd } from '@/lib/seo';
 import { faqItems } from '@/lib/faq';
 
 export default function Home() {
   const meta = buildMeta({
-    title: 'Jasa Buat Web & Aplikasi — Medan, Palu, Indonesia',
+    title: 'Jasa Buat Web & Aplikasi (SEO + GEO) — Medan, Palu, Indonesia',
     description:
-      'Jasa buat web & jasa buat aplikasi Medan, Palu, seluruh Indonesia. Landing page mulai Rp 150rb (technical SEO bundled), aplikasi POS kasir, ERP, booking mulai Rp 4 juta (estimasi build 1 bulan penuh), dan jasa buat sistem custom mulai Rp 15 juta. Hosting server Indonesia tersedia.',
+      'Jasa buat web & jasa buat aplikasi Medan, Palu, seluruh Indonesia. Landing page mulai Rp 300rb dengan technical SEO + GEO (Generative Engine Optimization) bawaan — dikutip ChatGPT, Gemini & Perplexity. Aplikasi POS kasir, ERP, booking mulai Rp 4 juta (estimasi build 1 bulan penuh), dan jasa buat sistem custom mulai Rp 15 juta. Domain dibeli terpisah, hosting server Indonesia tersedia.',
     path: '/',
   });
 
-  const jsonLd = [localBusinessJsonLd(), webSiteJsonLd(), faqJsonLd(faqItems)];
+  const jsonLd = [localBusinessJsonLd(), webSiteJsonLd(), faqJsonLd(faqItems), geoServiceJsonLd()];
 
   return (
     <>
@@ -55,6 +56,7 @@ export default function Home() {
       <main>
         <Hero />
         <WhyDigital />
+        <GEO />
         <WhyUs />
         <Services />
         <Recommendation />

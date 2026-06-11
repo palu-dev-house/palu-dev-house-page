@@ -7,8 +7,8 @@ import { ButtonLink } from '../ui/Button';
 const services = [
   {
     title: 'Landing Page',
-    subtitle: 'Landing page + technical SEO sekali bayar',
-    bullets: ['Mulai Rp 150rb', 'Mobile-first responsive', 'SEO on-page + schema', 'Meta tags + sitemap siap'],
+    subtitle: 'Landing page + technical SEO & GEO sekali bayar',
+    bullets: ['Mulai Rp 300rb', 'Mobile-first responsive', 'SEO + GEO on-page + schema', 'Dikutip ChatGPT, Gemini & Perplexity'],
     href: '#harga',
   },
   {
