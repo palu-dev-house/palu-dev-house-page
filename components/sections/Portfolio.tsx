@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from '../layout/Container';
 import { MotionSection } from '../ui/MotionSection';
@@ -15,7 +16,7 @@ export function Portfolio() {
             Produk yang sudah kami build dan running di lapangan.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {portfolioItems.map((item, i) => (
             <motion.a
               key={item.url}
@@ -27,14 +28,23 @@ export function Portfolio() {
               whileHover={{ y: -4 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.04 }}
-              className="rounded-xl border border-line bg-surface p-6 flex flex-col justify-between min-h-[140px] hover:border-brand transition-colors"
+              className="group rounded-xl border border-line bg-surface overflow-hidden hover:border-brand transition-colors"
             >
-              <div>
+              <div className="relative aspect-[16/10] overflow-hidden border-b border-line bg-surface-muted">
+                <Image
+                  src={item.image}
+                  alt={`Preview ${item.name}`}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="p-6">
                 <div className="text-xs font-medium text-ink-muted">{item.category}</div>
                 <div className="mt-2 font-semibold text-ink">{item.name}</div>
-              </div>
-              <div className="mt-4 text-xs text-brand font-medium">
-                Buka live site →
+                <div className="mt-4 text-xs text-brand font-medium">
+                  Buka live site →
+                </div>
               </div>
             </motion.a>
           ))}

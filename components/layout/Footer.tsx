@@ -40,6 +40,11 @@ export function Footer() {
                   Harga Lengkap
                 </Link>
               </li>
+              <li>
+                <Link href="/tentang" className="hover:text-ink">
+                  Tentang Kami
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

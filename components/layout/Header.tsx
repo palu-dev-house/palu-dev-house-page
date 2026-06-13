@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/#rekomendasi', label: 'Rekomendasi' },
   { href: '/harga', label: 'Harga' },
   { href: '/artikel', label: 'Artikel' },
+  { href: '/tentang', label: 'Tentang' },
   { href: '/#faq', label: 'FAQ' },
 ];
 
