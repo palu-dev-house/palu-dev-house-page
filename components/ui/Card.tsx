@@ -5,15 +5,28 @@ interface CardProps {
   children: ReactNode;
   className?: string;
   hoverable?: boolean;
+  /** `sunken` sits back on a muted band; `raised` floats above white. */
+  tone?: 'default' | 'raised' | 'sunken';
 }
 
-export function Card({ children, className = '', hoverable = true }: CardProps) {
-  const hoverProps = hoverable ? { whileHover: { y: -4, boxShadow: '0 12px 32px -8px rgba(32, 101, 161, 0.18)' } } : {};
+const toneStyles = {
+  default: 'border-line bg-surface',
+  raised: 'border-line bg-surface shadow-md',
+  sunken: 'border-line bg-surface-muted',
+} as const;
+
+export function Card({ children, className = '', hoverable = true, tone = 'default' }: CardProps) {
   return (
     <motion.div
-      {...hoverProps}
-      transition={{ duration: 0.2 }}
-      className={`rounded-xl border border-line bg-surface p-6 ${className}`}
+      // Transform-only on hover; the shadow is a CSS transition so the browser
+      // is not recompositing a blur on every frame.
+      whileHover={hoverable ? { y: -4 } : undefined}
+      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+      className={
+        `rounded-lg border p-6 transition-shadow duration-200 ${toneStyles[tone]} ` +
+        (hoverable ? 'hover:shadow-lg ' : '') +
+        className
+      }
     >
       {children}
     </motion.div>

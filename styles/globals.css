@@ -2,41 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * Design tokens.
+ *
+ * Colours are stored as space-separated RGB channels ("29 91 158"), not hex,
+ * so Tailwind can compose them with an alpha modifier — `bg-brand-600/15`
+ * becomes `rgb(29 91 158 / 15%)`. Held as hex behind a `var()`, every such
+ * modifier silently computed to transparent.
+ *
+ * The previous set was one flat blue plus a grey ramp, which read as a generic
+ * SaaS template. For an agency whose own site is the strongest thing in its
+ * portfolio, that undersells the work. This palette keeps the blue as the
+ * brand anchor but gives it a full ramp to build depth with, and adds a warm
+ * accent so a call to action can actually stand out against it.
+ */
 :root {
-  --color-brand: #2065A1;
-  --color-brand-light: #EDF4F8;
-  --color-ink: #0A0A0A;
-  --color-ink-muted: #404040;
-  --color-surface: #FFFFFF;
-  --color-surface-muted: #F7F7F8;
-  --color-line: #E5E5E5;
+  /* Brand ramp — 600 is the anchor; the old --color-brand was #2065A1. */
+  --color-brand-50: 238 246 253;
+  --color-brand-100: 215 233 249;
+  --color-brand-200: 179 212 242;
+  --color-brand-300: 130 183 232;
+  --color-brand-400: 74 147 216;
+  --color-brand-500: 43 116 191;
+  --color-brand-600: 29 91 158;
+  --color-brand-700: 26 74 128;
+  --color-brand-800: 26 63 106;
+  --color-brand-900: 26 53 89;
+  --color-brand-950: 17 34 58;
+
+  /* Warm accent. Blue-on-blue gives a CTA nothing to push against; amber
+     carries enough contrast to lead the eye without shouting. */
+  --color-accent-400: 251 191 74;
+  --color-accent-500: 245 166 35;
+  --color-accent-600: 217 134 20;
+  /* Gradient-tail amber. accent-600 measures 2.85:1 on white, just under the
+     3:1 WCAG minimum for large text; this is 3.73:1. */
+  --color-accent-700: 184 118 15;
+
+  --color-brand: var(--color-brand-600);
+  --color-brand-light: var(--color-brand-50);
+
+  /* Neutrals warmed a touch — pure #0A0A0A against pure white is harsher than
+     body copy needs, and the slight warmth sits better beside the amber. */
+  --color-ink: 13 17 23;
+  --color-ink-muted: 75 85 99;
+  --color-ink-subtle: 107 114 128;
+  --color-surface: 255 255 255;
+  --color-surface-muted: 246 248 250;
+  --color-surface-sunken: 238 241 245;
+  --color-line: 227 232 238;
+  --color-line-strong: 203 213 225;
+
+  /* Elevation. Tinted with the brand hue rather than neutral black, so cards
+     feel part of the palette instead of sitting on top of it. */
+  --shadow-sm: 0 1px 2px rgba(16, 34, 58, 0.06);
+  --shadow-md: 0 4px 16px -4px rgba(16, 34, 58, 0.1);
+  --shadow-lg: 0 12px 32px -8px rgba(16, 34, 58, 0.14);
+  --shadow-xl: 0 24px 56px -16px rgba(16, 34, 58, 0.2);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
 }
 
 .dark {
-  --color-brand: #4A8FCC;
-  --color-brand-light: #0F2A42;
-  --color-ink: #F7F7F8;
-  --color-ink-muted: #C4C4C4;
-  --color-surface: #0A0A0A;
-  --color-surface-muted: #171717;
-  --color-line: #2E2E2E;
+  --color-brand: var(--color-brand-400);
+  --color-brand-light: 15 41 66;
+
+  --color-accent-500: 251 191 74;
+  --color-accent-600: 245 166 35;
+
+  --color-ink: 232 237 244;
+  --color-ink-muted: 163 176 194;
+  --color-ink-subtle: 125 139 158;
+  --color-surface: 11 16 23;
+  --color-surface-muted: 19 26 36;
+  --color-surface-sunken: 26 35 48;
+  --color-line: 35 45 59;
+  --color-line-strong: 51 64 79;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px -4px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 24px 56px -16px rgba(0, 0, 0, 0.7);
 }
 
 html {
   scroll-behavior: smooth;
+  /* Anchors must clear the sticky header. */
+  scroll-padding-top: 88px;
 }
 
 body {
-  background-color: var(--color-surface);
-  color: var(--color-ink);
-  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-ink));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Display face for headings; the body face is applied on <body> by next/font. */
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.022em;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -45,33 +120,80 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-brand);
-  color: #FFFFFF;
+  background-color: rgb(var(--color-brand));
+  color: #ffffff;
+}
+
+/* Tailwind v3's preflight leaves buttons at the UA default cursor. */
+button:not(:disabled),
+[role='button']:not([aria-disabled='true']),
+summary {
+  cursor: pointer;
 }
 
 /* Scroll-FPS optimizations
  * - content-visibility lets the browser skip layout/paint for offscreen sections
  * - contain-intrinsic-size reserves layout space so the scrollbar doesn't jump
- * - transform hint lifts the element to its own GPU layer
  */
 .cv-auto {
   content-visibility: auto;
   contain-intrinsic-size: 1px 600px;
 }
 
-.gpu-layer {
-  transform: translateZ(0);
-  will-change: transform;
-  backface-visibility: hidden;
+/* ---------------------------------------------------------------------------
+   Decorative backdrops
+   The old page was flat white top to bottom, so every section read at exactly
+   the same depth and the eye had nothing to travel along. These give the hero
+   and feature bands some dimension without shipping an image.
+   --------------------------------------------------------------------------- */
+
+/* Soft brand glow, for behind the hero. */
+.bg-glow {
+  background-image:
+    radial-gradient(60% 55% at 15% 0%, rgba(74, 147, 216, 0.16), transparent 60%),
+    radial-gradient(45% 45% at 90% 10%, rgba(245, 166, 35, 0.13), transparent 62%);
 }
 
-/* Prose tuning for article body */
-.prose-custom h2 {
-  scroll-margin-top: 5rem;
+.dark .bg-glow {
+  background-image:
+    radial-gradient(60% 55% at 15% 0%, rgba(74, 147, 216, 0.14), transparent 60%),
+    radial-gradient(45% 45% at 90% 10%, rgba(245, 166, 35, 0.08), transparent 62%);
 }
 
-.prose-custom .lead {
-  font-size: 1.125rem;
-  line-height: 1.7;
+/* Faint engineering grid — a quiet nod to what the company actually does. */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(var(--color-line)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--color-line)) 1px, transparent 1px);
+  background-size: 56px 56px;
+  /* Fades out at the edges so it never competes with the copy. */
+  mask-image: radial-gradient(70% 60% at 50% 40%, #000 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 40%, #000 30%, transparent 100%);
 }
 
+/* Gradient text for the one phrase per page that carries the promise. */
+.text-gradient {
+  /* Stops at brand-400, not amber. A gradient that ran all the way to
+     accent-500 finished at roughly 2.2:1 on white, which put the tail of the
+     h1 below readable contrast — a headline is the last place to spend
+     legibility on decoration. accent-600 is the darker amber and only tints
+     the very end. */
+  background-image: linear-gradient(
+    100deg,
+    rgb(var(--color-brand-700)),
+    rgb(var(--color-brand-500)) 55%,
+    rgb(var(--color-accent-700))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    rgb(var(--color-brand-300)),
+    rgb(var(--color-brand-200)) 55%,
+    rgb(var(--color-accent-400))
+  );
+}
