@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import { SeoHead } from '@/components/layout/SeoHead';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -53,23 +53,10 @@ export default function ArticlePage({ article, related }: Props) {
 
   return (
     <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.description} />
-        <meta name="keywords" content={meta.keywords} />
-        <link rel="canonical" href={meta.canonical} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={meta.ogTitle} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={meta.canonical} />
-        <meta property="og:image" content={meta.ogImage} />
+      <SeoHead meta={meta} ogType="article" jsonLd={[articleSchema]}>
         <meta property="article:published_time" content={article.publishedAt} />
         <meta property="article:section" content={article.category} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-        />
-      </Head>
+      </SeoHead>
       <Header />
       <main>
         <section className="py-section-sm md:pt-section">

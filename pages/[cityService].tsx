@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import { SeoHead } from '@/components/layout/SeoHead';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -86,27 +86,7 @@ export default function CityServicePage({ page, otherCities }: Props) {
 
   return (
     <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.description} />
-        <meta name="keywords" content={meta.keywords} />
-        <link rel="canonical" href={meta.canonical} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={meta.ogTitle} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={meta.canonical} />
-        <meta property="og:image" content={meta.ogImage} />
-        <meta property="og:locale" content="id_ID" />
-        <meta name="geo.region" content="ID" />
-        <meta name="geo.placename" content={page.city} />
-        {jsonLd.map((obj, i) => (
-          <script
-            key={i}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }}
-          />
-        ))}
-      </Head>
+      <SeoHead meta={meta} jsonLd={jsonLd} />
       <Header />
       <main>
         {/* Hero */}

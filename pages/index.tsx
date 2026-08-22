@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import { Header } from '@/components/layout/Header';
+import { SeoHead } from '@/components/layout/SeoHead';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { WhyDigital } from '@/components/sections/WhyDigital';
@@ -26,32 +26,10 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.description} />
-        <meta name="keywords" content={meta.keywords} />
-        <link rel="canonical" href={meta.canonical} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={meta.ogTitle} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={meta.canonical} />
-        <meta property="og:image" content={meta.ogImage} />
-        <meta property="og:locale" content="id_ID" />
-        <meta property="og:site_name" content="Palu Dev House" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={meta.ogTitle} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.ogImage} />
-        <meta name="geo.region" content="ID" />
-        <meta name="geo.placename" content="Medan, Palu" />
-        {jsonLd.map((obj, i) => (
-          <script
-            key={i}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }}
-          />
-        ))}
-      </Head>
+      <SeoHead
+        meta={meta}
+        jsonLd={jsonLd}
+      />
       <Header />
       <main>
         <Hero />

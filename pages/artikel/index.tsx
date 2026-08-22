@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import { SeoHead } from '@/components/layout/SeoHead';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/layout/Container';
@@ -16,16 +16,9 @@ export default function ArtikelIndex() {
 
   return (
     <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.description} />
-        <meta name="keywords" content={meta.keywords} />
-        <link rel="canonical" href={meta.canonical} />
-        <meta property="og:title" content={meta.ogTitle} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={meta.canonical} />
-        <meta property="og:image" content={meta.ogImage} />
-      </Head>
+      <SeoHead
+        meta={meta}
+      />
       <Header />
       <main>
         <section className="py-section-sm md:py-section">

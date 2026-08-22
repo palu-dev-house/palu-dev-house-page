@@ -13,6 +13,25 @@ export const DEFAULT_DESCRIPTION =
  * listed here previously did exactly that. Verify a profile answers 200
  * before adding it.
  */
+/**
+ * The social preview card.
+ *
+ * PNG, not SVG. WhatsApp, Facebook, Instagram, LinkedIn, X and Slack all
+ * refuse SVG for og:image and render no thumbnail at all — the site shipped
+ * an SVG here, so every link ever shared appeared as bare text. WhatsApp is
+ * how Indonesian clients actually pass links around, which made this the
+ * most expensive four characters on the site.
+ *
+ * 1200x630 is the size the large-card layouts expect; declaring the
+ * dimensions in the markup lets a scraper commit to a large card without
+ * fetching and measuring the file first.
+ */
+export const OG_IMAGE = '/og-image.png';
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
+export const OG_IMAGE_ALT =
+  'Palu Dev House — Website & Aplikasi untuk Bisnis';
+
 export const SOCIAL_PROFILES = [
   'https://www.instagram.com/paludevhouse',
   'https://github.com/palu-dev-house',
@@ -77,7 +96,7 @@ export function buildMeta({
     title: fullTitle,
     description: description ?? DEFAULT_DESCRIPTION,
     canonical,
-    ogImage: `${SITE_URL}${ogImage ?? '/og-image.svg'}`,
+    ogImage: `${SITE_URL}${ogImage ?? OG_IMAGE}`,
     ogTitle: title ?? SITE_NAME,
     keywords: kw,
   };
@@ -92,7 +111,7 @@ export function localBusinessJsonLd() {
     alternateName: ['Palu Dev House', 'PDH', 'Software House Palu Medan'],
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
-    image: `${SITE_URL}/og-image.svg`,
+    image: `${SITE_URL}${OG_IMAGE}`,
     logo: `${SITE_URL}/logo.svg`,
     sameAs: SOCIAL_PROFILES,
     areaServed: [
