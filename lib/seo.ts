@@ -6,12 +6,15 @@ export const DEFAULT_DESCRIPTION =
 
 /**
  * Resmi/social profiles for entity clarity & sameAs — a core GEO signal.
- * AI engines use these to confirm we're a real, single entity. Update with
- * real profile URLs as they go live.
+ * AI engines use these to confirm we're a real, single entity.
+ *
+ * Only list profiles that actually resolve. A sameAs entry pointing at a 404
+ * weakens the very signal it exists to strengthen — the LinkedIn company page
+ * listed here previously did exactly that. Verify a profile answers 200
+ * before adding it.
  */
 export const SOCIAL_PROFILES = [
   'https://www.instagram.com/paludevhouse',
-  'https://www.linkedin.com/company/paludevhouse',
   'https://github.com/palu-dev-house',
 ];
 

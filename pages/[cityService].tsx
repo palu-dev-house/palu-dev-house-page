@@ -13,6 +13,7 @@ import {
   type CityPage,
 } from '@/lib/cityPages';
 import { landingPackage, webappPackage } from '@/lib/pricing';
+import { WHATSAPP_NUMBER } from '@/lib/contact';
 import {
   buildMeta,
   faqJsonLd,
@@ -21,7 +22,6 @@ import {
   SITE_URL,
 } from '@/lib/seo';
 
-const WHATSAPP_NUMBER = '628000000000';
 
 interface Props {
   page: CityPage;

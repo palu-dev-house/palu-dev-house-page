@@ -13,8 +13,8 @@ import {
   type Article,
 } from '@/lib/articles';
 import { buildMeta, SITE_URL } from '@/lib/seo';
+import { WHATSAPP_NUMBER } from '@/lib/contact';
 
-const WHATSAPP_NUMBER = '628000000000';
 
 interface Props {
   article: Article;
