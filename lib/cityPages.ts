@@ -38,7 +38,7 @@ const sharedWebHighlights = [
 const sharedAppHighlights = [
   {
     title: 'POS Kasir, ERP, Booking, Tuition',
-    body: 'Aplikasi web proven: tokoninja (POS multi-outlet), tuition-app (booking kursus), hinno.art (creative services). Workflow-nya sudah matang, tinggal custom ke bisnismu.',
+    body: 'Aplikasi web proven: Toko Ninja (POS multi-outlet) dan hinno.art (creative services), plus sistem kasir sekolah yang jalan harian. Workflow-nya sudah matang, tinggal custom ke bisnismu.',
   },
   {
     title: 'Hosting Server Indonesia Termasuk',

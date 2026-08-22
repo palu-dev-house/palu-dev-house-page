@@ -13,7 +13,7 @@ const services = [
   {
     title: 'Web Application',
     subtitle: 'POS / ERP / Booking / Tuition',
-    bullets: ['Build + maintenance bulanan', 'Estimasi build 1 bulan penuh', 'Proven di tokoninja & tuition-app', 'Hosting server Indonesia'],
+    bullets: ['Build + maintenance bulanan', 'Estimasi build 1 bulan penuh', 'Proven di Toko Ninja (POS multi-outlet)', 'Hosting server Indonesia'],
     href: '#paket',
   },
   {

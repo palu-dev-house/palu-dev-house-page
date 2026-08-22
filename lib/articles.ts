@@ -615,10 +615,10 @@ export const articles: Article[] = [
         },
       },
       {
-        heading: 'Kasus 5: Kursus Bahasa di Palu (Tuition App)',
+        heading: 'Kasus 5: Kursus Bahasa di Palu (aplikasi kursus)',
         paragraphs: [
           'Before: Jadwal kelas di spreadsheet. Pembayaran lewat transfer manual, cek pembayaran satu-satu. Attendance dicatat di kertas yang sering hilang.',
-          'After (5 bulan pakai tuition app): Jadwal kelas online, murid bisa cek sendiri. Pembayaran via payment gateway (otomatis rekonsiliasi). Attendance via QR code yang di-scan saat masuk kelas. Laporan attendance dan pembayaran auto-generate tiap bulan.',
+          'After (5 bulan pakai aplikasi kursus): Jadwal kelas online, murid bisa cek sendiri. Pembayaran via payment gateway (otomatis rekonsiliasi). Attendance via QR code yang di-scan saat masuk kelas. Laporan attendance dan pembayaran auto-generate tiap bulan.',
         ],
         callout: {
           title: 'Impact',
