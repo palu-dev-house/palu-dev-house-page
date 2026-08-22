@@ -5,6 +5,15 @@ export interface PortfolioItem {
   image: string;
 }
 
+// Every entry is rendered as a clickable card (components/sections/Portfolio.tsx
+// keys on and links to `url`), so a dead URL sends a prospective client from
+// this page straight to a 404. Verify a link still answers 200 before adding
+// it back.
+//
+// Removed 2026-08-22: "Tuition App" (tuition-app.up.railway.app) — the Railway
+// deployment was decommissioned and the URL now 404s. Its successor, SkolFi,
+// runs on the school's own machine and has no public address yet; add it back
+// once it does.
 export const portfolioItems: PortfolioItem[] = [
   {
     name: 'Toko Ninja',
@@ -35,11 +44,5 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://hinno.art/',
     category: 'Portfolio Site',
     image: '/portfolio/hinno-art.png',
-  },
-  {
-    name: 'Tuition App',
-    url: 'https://tuition-app.up.railway.app/',
-    category: 'Education Platform',
-    image: '/portfolio/tuition-app.png',
   },
 ];
