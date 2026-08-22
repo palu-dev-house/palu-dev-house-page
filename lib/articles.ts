@@ -85,7 +85,7 @@ export const articles: Article[] = [
         ],
         callout: {
           title: 'GEO sudah include di paket Landing Page',
-          body: 'Mulai paket Pro (Rp 400rb), GEO starter — llms.txt + struktur Q&A citable + schema FAQ/Article — sudah termasuk. Paket Max (Rp 500rb) dapat GEO lengkap: structured data penuh, akses AI crawler, konten citable, dan E-E-A-T signal. Harga belum termasuk domain; domain dibeli klien sendiri dan kami bantu setup.',
+          body: 'Mulai paket Pro, GEO starter — llms.txt + struktur Q&A citable + schema FAQ/Article — sudah termasuk. Paket Max dapat GEO lengkap: structured data penuh, akses AI crawler, konten citable, dan E-E-A-T signal. Domain dibeli klien sendiri atas nama kamu, dan kami bantu setup.',
         },
       },
     ],
@@ -138,7 +138,7 @@ export const articles: Article[] = [
         ],
         callout: {
           title: 'Pertimbangan biaya',
-          body: 'SaaS ERP biasanya Rp 200rb – 2jt/bulan per outlet. ERP custom Palu Dev House dari Rp 9 juta build (estimasi 1 bulan penuh) + Rp 300rb/bulan hosting, tanpa fee per outlet.',
+          body: 'SaaS ERP biasanya Rp 200rb – 2jt/bulan per outlet, dan biayanya naik tiap kamu buka cabang. ERP custom Palu Dev House dibayar sekali di depan untuk build (estimasi 1 bulan penuh) plus satu biaya maintenance bulanan yang tetap — tanpa fee per outlet. Chat WhatsApp untuk estimasi sesuai jumlah outlet kamu.',
         },
       },
     ],
@@ -195,7 +195,7 @@ export const articles: Article[] = [
     ],
     cta: {
       headline: 'Butuh POS yang sesuai bisnismu?',
-      body: 'Paket POS Palu Dev House mulai Rp 4 juta + Rp 150rb/bulan termasuk hosting Indonesia, estimasi build 1 bulan penuh. Konsultasi dulu untuk memastikan fit.',
+      body: 'Paket POS Palu Dev House sudah termasuk hosting Indonesia dan maintenance, estimasi build 1 bulan penuh. Konsultasi dulu via WhatsApp untuk memastikan fit — sekalian kami kirim estimasi biayanya.',
     },
   },
   {
@@ -242,13 +242,13 @@ export const articles: Article[] = [
         ],
         callout: {
           title: 'Di Palu Dev House',
-          body: 'Semua paket landing page (Rp 300rb – Rp 500rb) sudah include technical SEO + GEO. Ga perlu beli jasa SEO terpisah — sudah built-in di build.',
+          body: 'Semua paket landing page — Starter, Pro, dan Max — sudah include technical SEO + GEO. Ga perlu beli jasa SEO terpisah, sudah built-in di build.',
         },
       },
     ],
     cta: {
       headline: 'Siap bikin landing page yang convert?',
-      body: 'Mulai dari Rp 300rb — sudah include mobile-first design, technical SEO + GEO, dan form WhatsApp integration.',
+      body: 'Sudah include mobile-first design, technical SEO + GEO, dan form WhatsApp integration. Chat dulu — estimasi biaya dan timeline kami hitung sesuai kebutuhan halamanmu.',
     },
   },
   {
@@ -370,7 +370,7 @@ export const articles: Article[] = [
         ],
         callout: {
           title: 'Di Palu Dev House',
-          body: 'Technical SEO + GEO sudah built-in di semua landing page (mulai Rp 300rb). Kami ga jual jasa SEO bulanan — fokus bangun fondasi yang solid (termasuk structured data & llms.txt untuk AI), lalu kasih kamu tools untuk monitor sendiri.',
+          body: 'Technical SEO + GEO sudah built-in di semua landing page yang kami bangun. Kami ga jual jasa SEO bulanan — fokus bangun fondasi yang solid (termasuk structured data & llms.txt untuk AI), lalu kasih kamu tools untuk monitor sendiri.',
         },
       },
     ],

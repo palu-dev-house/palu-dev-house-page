@@ -1,6 +1,21 @@
 import { describe, it, expect } from 'vitest';
 import { recommend, questions, type QuizAnswers } from '../lib/recommendation';
 
+const q1Opts = ['A', 'B', 'C', 'D', 'E'] as const;
+const q2Opts = ['A', 'B', 'C'] as const;
+const q3Opts = ['A', 'B', 'C'] as const;
+const q4Opts = ['A', 'B', 'C', 'D'] as const;
+
+/** Every one of the 180 reachable answer combinations. */
+function allAnswers(): QuizAnswers[] {
+  const combos: QuizAnswers[] = [];
+  for (const q1 of q1Opts)
+    for (const q2 of q2Opts)
+      for (const q3 of q3Opts)
+        for (const q4 of q4Opts) combos.push({ q1, q2, q3, q4 });
+  return combos;
+}
+
 describe('recommendation engine', () => {
   it('exposes 4 questions with defined options', () => {
     expect(questions).toHaveLength(4);
@@ -9,6 +24,10 @@ describe('recommendation engine', () => {
       expect(q.id).toBeTruthy();
       expect(q.label).toBeTruthy();
     });
+  });
+
+  it('covers exactly 180 answer combinations', () => {
+    expect(allAnswers()).toHaveLength(180);
   });
 
   it('recommends Landing Page Starter for new business needing presence', () => {
@@ -57,33 +76,43 @@ describe('recommendation engine', () => {
   });
 
   it('never returns a legacy SEO package id', () => {
-    const q1Opts = ['A', 'B', 'C', 'D', 'E'] as const;
-    const q2Opts = ['A', 'B', 'C'] as const;
-    const q3Opts = ['A', 'B', 'C'] as const;
-    const q4Opts = ['A', 'B', 'C', 'D'] as const;
-    for (const q1 of q1Opts)
-      for (const q2 of q2Opts)
-        for (const q3 of q3Opts)
-          for (const q4 of q4Opts) {
-            const result = recommend({ q1, q2, q3, q4 });
-            expect(result.packageId).not.toMatch(/^seo-/);
-            expect(result.scrollTo).toBe('pricing');
-          }
+    for (const answers of allAnswers()) {
+      const result = recommend(answers);
+      expect(result.packageId).not.toMatch(/^seo-/);
+      expect(result.scrollTo).toBe('paket');
+    }
   });
 
   it('returns a valid package for every combination of answers', () => {
-    const q1Opts = ['A', 'B', 'C', 'D', 'E'] as const;
-    const q2Opts = ['A', 'B', 'C'] as const;
-    const q3Opts = ['A', 'B', 'C'] as const;
-    const q4Opts = ['A', 'B', 'C', 'D'] as const;
-    for (const q1 of q1Opts)
-      for (const q2 of q2Opts)
-        for (const q3 of q3Opts)
-          for (const q4 of q4Opts) {
-            const result = recommend({ q1, q2, q3, q4 });
-            expect(result.packageId).toBeTruthy();
-            expect(result.reason).toBeTruthy();
-            expect(result.headline).toBeTruthy();
-          }
+    for (const answers of allAnswers()) {
+      const result = recommend(answers);
+      expect(result.packageId).toBeTruthy();
+      expect(result.reason).toBeTruthy();
+      expect(result.headline).toBeTruthy();
+      expect(result.nextStep).toBeTruthy();
+    }
+  });
+
+  /**
+   * Pricing came off the site entirely — the result used to carry a `priceLabel`,
+   * and one branch quoted "Rp 225.000" for a package that cost Rp 400.000. This
+   * asserts the class of bug cannot come back through the quiz.
+   */
+  it('never quotes a price in any result', () => {
+    const priceish = /\bRp\b|\brupiah\b|\bjuta\b|\brb\b|\bribu\b|\d{3}\.\d{3}/i;
+    for (const answers of allAnswers()) {
+      const result = recommend(answers);
+      const text = `${result.headline} ${result.reason} ${result.nextStep}`;
+      expect(text).not.toMatch(priceish);
+      expect(result).not.toHaveProperty('priceLabel');
+    }
+  });
+
+  /** Every result ends by pointing at a real conversation, not a number. */
+  it('always tells the visitor what to do next', () => {
+    for (const answers of allAnswers()) {
+      const result = recommend(answers);
+      expect(result.nextStep.toLowerCase()).toContain('whatsapp');
+    }
   });
 });

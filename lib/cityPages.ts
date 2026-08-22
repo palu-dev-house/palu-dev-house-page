@@ -26,8 +26,8 @@ const sharedWebHighlights = [
     body: 'Setiap website yang kami bangun sudah include meta tags, schema, sitemap, Open Graph, Core Web Vitals tuning, plus GEO (llms.txt, structured data, konten citable) supaya dikutip ChatGPT/Gemini/Perplexity. Siap bersaing di halaman 1 Google sekaligus di jawaban AI sejak hari pertama.',
   },
   {
-    title: 'Harga Transparan Mulai Rp 300rb',
-    body: 'Bukan harga "hubungi untuk quote". Starter Rp 300rb, Pro Rp 400rb, Max Rp 500rb — semua build sekali bayar. Harga belum termasuk domain (dibeli klien sendiri, kami bantu setup); hosting Indonesia tersedia sebagai add-on.',
+    title: 'Scope Jelas, Estimasi Cepat',
+    body: 'Tiga tingkat kelengkapan — Starter, Pro, Max — dan isi tiap paket kami tulis terbuka, jadi kamu tahu persis apa yang dikerjakan. Build sekali bayar. Chat sekali, estimasi biaya dan timeline kami balas hari itu juga. Domain dibeli klien sendiri (kami bantu setup); hosting Indonesia tersedia sebagai add-on.',
   },
   {
     title: 'Mobile-First & Page Speed',
@@ -46,7 +46,7 @@ const sharedAppHighlights = [
   },
   {
     title: 'Maintenance Bulanan Fair',
-    body: 'Monthly fee Rp 150rb – Rp 500rb tergantung paket. Sudah include bug fix, minor update, dan hosting. Tidak ada fee tersembunyi per outlet atau per user.',
+    body: 'Satu biaya bulanan sesuai paket — sudah include bug fix, minor update, dan hosting. Tidak ada fee tersembunyi per outlet atau per user, dan angkanya dikunci di kontrak sejak awal.',
   },
 ];
 
@@ -58,7 +58,7 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'web',
     title: 'Jasa Buat Web Medan — Landing Page & Technical SEO',
     description:
-      'Jasa buat web Medan mulai Rp 300rb. Landing page profesional dengan technical SEO + GEO bundled (dikutip ChatGPT/Gemini/Perplexity), mobile-first, form WhatsApp, dan opsi hosting server Indonesia. Melayani UMKM & bisnis di Medan, Deli Serdang, Binjai.',
+      'Jasa buat web Medan: landing page profesional dengan technical SEO + GEO bundled (dikutip ChatGPT/Gemini/Perplexity), mobile-first, form WhatsApp, dan opsi hosting server Indonesia. Melayani UMKM & bisnis di Medan, Deli Serdang, Binjai. Konsultasi & estimasi gratis via WhatsApp.',
     h1: 'Jasa Buat Web di Medan yang Fokus ke Hasil',
     kicker: 'Medan · Sumatera Utara',
     intro:
@@ -99,7 +99,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Bisa sekalian bikin aplikasi kasir atau ERP untuk bisnis di Medan?',
         answer:
-          'Bisa. Kami juga punya paket web application (POS/Kasir Rp 4 juta, ERP Rp 9 juta, Booking Rp 6 juta — estimasi build 1 bulan penuh) yang proven dipakai klien retail dan FnB di Sumatera Utara. Cek halaman Harga untuk detail.',
+          'Bisa. Kami juga punya paket web application — POS/Kasir untuk satu outlet, ERP untuk multi-outlet, dan Booking untuk bisnis jasa, semuanya dengan estimasi build 1 bulan penuh — yang proven dipakai klien retail dan FnB di Sumatera Utara. Chat WhatsApp untuk estimasi sesuai skala bisnismu.',
       },
     ],
   },
@@ -110,11 +110,11 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'aplikasi',
     title: 'Jasa Buat Aplikasi Medan — POS, ERP, Booking',
     description:
-      'Jasa buat aplikasi Medan mulai Rp 4 juta + hosting Indonesia, estimasi build 1 bulan penuh. Aplikasi kasir (POS), ERP multi-outlet, booking online, dan sistem custom untuk UMKM, retail, FnB di Medan & Sumatera Utara.',
+      'Jasa buat aplikasi Medan dengan hosting server Indonesia, estimasi build 1 bulan penuh. Aplikasi kasir (POS), ERP multi-outlet, booking online, dan sistem custom untuk UMKM, retail, FnB di Medan & Sumatera Utara. Estimasi biaya gratis via WhatsApp.',
     h1: 'Jasa Buat Aplikasi di Medan untuk UMKM & Bisnis Menengah',
     kicker: 'Medan · Sumatera Utara',
     intro:
-      'Bisnis kamu mulai kewalahan diatur pakai Excel? Saatnya upgrade ke aplikasi web custom. Kami spesialis jasa buat aplikasi di Medan — POS kasir untuk cafe, ERP multi-outlet untuk retail, booking online untuk jasa salon/klinik. Semua dengan hosting server Indonesia dan harga transparan.',
+      'Bisnis kamu mulai kewalahan diatur pakai Excel? Saatnya upgrade ke aplikasi web custom. Kami spesialis jasa buat aplikasi di Medan — POS kasir untuk cafe, ERP multi-outlet untuk retail, booking online untuk jasa salon/klinik. Semua dengan hosting server Indonesia, scope yang ditulis terbuka, dan estimasi yang keluar cepat.',
     keywords: [
       'jasa buat aplikasi medan',
       'jasa pembuatan aplikasi medan',
@@ -134,9 +134,9 @@ export const cityPages: CityPage[] = [
     ],
     faqs: [
       {
-        question: 'Aplikasi kasir untuk cafe di Medan, harga berapa?',
+        question: 'Aplikasi kasir untuk cafe di Medan, paket mana yang cocok?',
         answer:
-          'Standard POS/Kasir Rp 4 juta sekali bayar + Rp 150rb/bulan untuk hosting & maintenance, estimasi build 1 bulan penuh. Cocok untuk single outlet. Kalau multi-outlet (misal cafe dengan 2–3 cabang di Medan), kami rekomendasi Pro ERP Rp 9 juta + Rp 300rb/bulan.',
+          'Untuk single outlet, Standard POS/Kasir sudah cukup: menu & produk management, transaksi real-time, laporan harian, cetak struk, plus hosting dan maintenance. Kalau multi-outlet (misal cafe dengan 2–3 cabang di Medan), kami rekomendasi Pro ERP yang nambah inventory tracking, staff & shift, dan dashboard analytics. Keduanya estimasi build 1 bulan penuh — chat WhatsApp dengan jumlah outlet kamu, estimasi biayanya kami kirim balik.',
       },
       {
         question: 'Aplikasinya bisa diakses dari HP?',
@@ -151,7 +151,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Bisa custom workflow sesuai bisnis saya di Medan?',
         answer:
-          'Paket Enterprise (mulai Rp 15 juta, estimasi build 1–3 bulan tergantung scope) memang dibangun dari nol sesuai workflow kamu — misal sistem komisi unik, integrasi supplier lokal, atau alur approval yang spesifik. Kami briefing dulu, mapping proses, lalu build.',
+          'Paket Enterprise (estimasi build 1–3 bulan tergantung scope) memang dibangun dari nol sesuai workflow kamu — misal sistem komisi unik, integrasi supplier lokal, atau alur approval yang spesifik. Kami briefing dulu, mapping proses, keluar estimasi biaya dan timeline, baru build.',
       },
     ],
   },
@@ -162,11 +162,11 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'web',
     title: 'Jasa Buat Web Palu — Landing Page Profesional',
     description:
-      'Jasa buat web Palu mulai Rp 300rb. Landing page profesional dengan technical SEO + GEO (dikutip ChatGPT/Gemini/Perplexity), mobile-first, form WhatsApp terintegrasi, dan opsi hosting server Indonesia. Tim lokal Sulawesi Tengah.',
+      'Jasa buat web Palu: landing page profesional dengan technical SEO + GEO (dikutip ChatGPT/Gemini/Perplexity), mobile-first, form WhatsApp terintegrasi, dan opsi hosting server Indonesia. Tim lokal Sulawesi Tengah, estimasi gratis via WhatsApp.',
     h1: 'Jasa Buat Web di Palu — Software House Lokal',
     kicker: 'Palu · Sulawesi Tengah',
     intro:
-      'Bisnis di Palu butuh website tapi bingung mulai dari mana? Kami software house lokal yang paham pasar Sulawesi Tengah — dari warung kopi di Jalan Imam Bonjol sampai bisnis jasa di Kelurahan Lolu. Harga transparan mulai Rp 300rb, technical SEO + GEO bundled, meeting bisa offline kalau perlu.',
+      'Bisnis di Palu butuh website tapi bingung mulai dari mana? Kami software house lokal yang paham pasar Sulawesi Tengah — dari warung kopi di Jalan Imam Bonjol sampai bisnis jasa di Kelurahan Lolu. Isi paket ditulis terbuka, technical SEO + GEO bundled, estimasi keluar cepat, dan meeting bisa offline kalau perlu.',
     keywords: [
       'jasa buat web palu',
       'jasa buat website palu',
@@ -191,9 +191,9 @@ export const cityPages: CityPage[] = [
           'Ya, kami punya tim di Palu (Sulawesi Tengah) — inilah asal nama "Palu Dev House". Untuk klien Palu, kami bisa meeting langsung. Sebagian besar koordinasi tetap remote supaya proyek cepat jalan.',
       },
       {
-        question: 'Berapa harga jasa buat web di Palu?',
+        question: 'Bagaimana cara tahu biaya jasa buat web di Palu?',
         answer:
-          'Rp 300rb untuk Landing Page Starter, Rp 400rb untuk Pro, Rp 500rb untuk Max. Semua harga sudah include technical SEO + GEO (meta tags, schema, sitemap, llms.txt, structured data, konten citable untuk AI). Harga belum termasuk domain (dibeli klien sendiri, kami bantu setup); hosting Indonesia sebagai add-on (shared Rp 300rb/tahun atau VPS Rp 99rb/bulan).',
+          'Kami hitung per proyek. Ada tiga tingkat kelengkapan — Starter, Pro, Max — dan semuanya sudah include technical SEO + GEO (meta tags, schema, sitemap, llms.txt, structured data, konten citable untuk AI). Chat WhatsApp, cerita bisnismu dan berapa halaman yang kamu butuh, lalu estimasi biaya + timeline kami balas. Domain dibeli klien sendiri (kami bantu setup) dan hosting Indonesia tersedia sebagai add-on, keduanya di luar paket.',
       },
       {
         question: 'Website bisnis Palu bisa muncul di Google Palu?',
@@ -203,7 +203,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Kalau butuh aplikasi kasir atau booking, bisa sekalian?',
         answer:
-          'Bisa. Kami juga melayani jasa buat aplikasi di Palu — POS kasir Rp 4 juta + Rp 150rb/bulan, ERP multi-outlet Rp 9 juta + Rp 300rb/bulan, booking online Rp 6 juta + Rp 200rb/bulan. Semua estimasi build 1 bulan penuh, hosting server Indonesia.',
+          'Bisa. Kami juga melayani jasa buat aplikasi di Palu — POS kasir untuk satu outlet, ERP untuk multi-outlet, dan booking online untuk bisnis jasa & kursus. Semua estimasi build 1 bulan penuh, hosting server Indonesia, plus maintenance bulanan. Estimasi biayanya kami hitung sesuai skala bisnismu.',
       },
     ],
   },
@@ -214,11 +214,11 @@ export const cityPages: CityPage[] = [
     serviceFocus: 'aplikasi',
     title: 'Jasa Buat Aplikasi Palu — POS, ERP, Sistem Custom',
     description:
-      'Jasa buat aplikasi Palu mulai Rp 4 juta + hosting Indonesia, estimasi build 1 bulan penuh. POS kasir, ERP, booking, dan jasa buat sistem custom untuk UMKM, cafe, retail, klinik, kursus di Palu & Sulawesi Tengah.',
+      'Jasa buat aplikasi Palu dengan hosting server Indonesia, estimasi build 1 bulan penuh. POS kasir, ERP, booking, dan jasa buat sistem custom untuk UMKM, cafe, retail, klinik, kursus di Palu & Sulawesi Tengah. Estimasi gratis via WhatsApp.',
     h1: 'Jasa Buat Aplikasi di Palu — Sistem Custom untuk Bisnis Lokal',
     kicker: 'Palu · Sulawesi Tengah',
     intro:
-      'Mau upgrade bisnis Palu kamu dari catatan manual ke aplikasi digital? Kami tim lokal yang fokus ke jasa buat aplikasi untuk UMKM Sulawesi Tengah. Aplikasi kasir untuk cafe di Kelurahan Besusu, sistem booking untuk klinik di Kelurahan Talise, ERP untuk toko retail — semua proven, harga transparan.',
+      'Mau upgrade bisnis Palu kamu dari catatan manual ke aplikasi digital? Kami tim lokal yang fokus ke jasa buat aplikasi untuk UMKM Sulawesi Tengah. Aplikasi kasir untuk cafe di Kelurahan Besusu, sistem booking untuk klinik di Kelurahan Talise, ERP untuk toko retail — semua proven, dengan scope dan estimasi yang jelas sejak awal.',
     keywords: [
       'jasa buat aplikasi palu',
       'jasa pembuatan aplikasi palu',
@@ -238,14 +238,14 @@ export const cityPages: CityPage[] = [
     ],
     faqs: [
       {
-        question: 'Harga jasa buat aplikasi kasir di Palu berapa?',
+        question: 'Paket aplikasi kasir mana yang cocok untuk bisnis saya di Palu?',
         answer:
-          'Standard POS/Kasir Rp 4 juta sekali bayar + Rp 150rb/bulan (hosting + maintenance), estimasi build 1 bulan penuh. Untuk multi-outlet atau fitur lebih kompleks, Pro ERP Rp 9 juta + Rp 300rb/bulan. Booking/Tuition App Rp 6 juta + Rp 200rb/bulan.',
+          'Standard POS/Kasir untuk satu outlet: transaksi real-time, laporan harian, cetak struk, hosting + maintenance, estimasi build 1 bulan penuh. Untuk multi-outlet atau kebutuhan yang lebih kompleks, Pro ERP nambah inventory, staff & shift, dan analytics. Untuk kursus, klinik, atau salon, Booking/Tuition App yang paling pas. Chat WhatsApp, sebutkan jenis bisnis dan jumlah outlet — estimasi biaya kami balas.',
       },
       {
         question: 'Aplikasinya bisa dipakai offline?',
         answer:
-          'Web application kami butuh internet. Untuk Enterprise (mulai Rp 15 juta), kami juga sediakan mobile app native yang bisa offline mode + sync saat online — cocok untuk daerah dengan sinyal ga stabil.',
+          'Web application kami butuh internet. Untuk paket Enterprise, kami juga sediakan mobile app native yang bisa offline mode + sync saat online — cocok untuk daerah dengan sinyal ga stabil.',
       },
       {
         question: 'Ada garansi setelah aplikasi launch?',
@@ -255,7 +255,7 @@ export const cityPages: CityPage[] = [
       {
         question: 'Kalau mau custom sistem atau program khusus bisa?',
         answer:
-          'Bisa — paket Enterprise mulai Rp 15 juta (estimasi build 1–3 bulan tergantung scope) khusus untuk custom workflow, integrasi API, atau mobile app. Kami briefing dulu, mapping proses bisnis kamu, baru build sesuai kebutuhan.',
+          'Bisa — paket Enterprise (estimasi build 1–3 bulan tergantung scope) khusus untuk custom workflow, integrasi API, atau mobile app. Kami briefing dulu, mapping proses bisnis kamu, keluar estimasi biaya dan timeline, baru build sesuai kebutuhan.',
       },
     ],
   },

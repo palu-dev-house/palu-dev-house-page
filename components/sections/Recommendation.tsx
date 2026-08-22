@@ -154,12 +154,10 @@ export function Recommendation() {
                     <h3 className="mt-2 font-display text-2xl font-semibold text-ink md:text-3xl">
                       {recommendation.headline}
                     </h3>
-                    <div className="mt-5 inline-flex items-center rounded-lg bg-brand-light px-4 py-2">
-                      <span className="font-display text-sm font-semibold text-brand">
-                        {recommendation.priceLabel}
-                      </span>
-                    </div>
                     <p className="mt-5 leading-relaxed text-ink-muted">{recommendation.reason}</p>
+                    <p className="mt-5 rounded-lg bg-brand-light px-4 py-3 text-sm leading-relaxed text-ink">
+                      {recommendation.nextStep}
+                    </p>
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                       {/* End of the funnel — the one place below the hero that
                           earns the amber. */}
@@ -172,8 +170,8 @@ export function Recommendation() {
                       >
                         Chat WhatsApp Sekarang
                       </ButtonLink>
-                      <ButtonLink href="#harga" variant="secondary" size="lg">
-                        Lihat paket lengkap
+                      <ButtonLink href="#paket" variant="secondary" size="lg">
+                        Lihat isi paket
                       </ButtonLink>
                     </div>
                     <Button variant="ghost" size="sm" className="mt-4" onClick={handleReset}>

@@ -1,26 +1,7 @@
 import { motion } from 'framer-motion';
 import { ButtonLink } from './Button';
-import type { PricingTier } from '@/lib/pricing';
-import { WHATSAPP_NUMBER } from '@/lib/contact';
-
-
-/**
- * Rupiah figures are long — "Mulai Rp 15.000.000" is nineteen characters and
- * will not survive a 226px column at 28px type. Splitting the qualifier and the
- * currency symbol off the numerals lets the number itself stay big and on one
- * line, and reads faster: the eye lands on the digits, not on "Mulai Rp".
- * No copy is changed — every word is still rendered, just at its own weight.
- */
-function parsePrice(value: string) {
-  const qualifier = /^(Mulai)\s+(.+)$/.exec(value);
-  const rest = qualifier ? qualifier[2] : value;
-  const currency = /^(Rp)\s*(.+)$/.exec(rest);
-  return {
-    qualifier: qualifier ? qualifier[1] : null,
-    currency: currency ? currency[1] : null,
-    amount: currency ? currency[2] : rest,
-  };
-}
+import type { PackageTier } from '@/lib/packages';
+import { whatsappLink } from '@/lib/contact';
 
 function CheckIcon({ className = '' }: { className?: string }) {
   return (
@@ -39,15 +20,21 @@ function CheckIcon({ className = '' }: { className?: string }) {
   );
 }
 
-interface PricingTableProps {
-  tier: PricingTier;
+interface PackageCardProps {
+  tier: PackageTier;
   index: number;
 }
 
-export function PricingTable({ tier, index }: PricingTableProps) {
-  const msg = encodeURIComponent(`Halo Palu Dev House, saya tertarik dengan paket ${tier.name}.`);
+/**
+ * A "what you get" card. The slot the price used to occupy is now the tier's
+ * one-line summary — the card still opens with a reason to keep reading, and
+ * the eye still lands somewhere before the tick list starts.
+ */
+export function PackageCard({ tier, index }: PackageCardProps) {
+  const href = whatsappLink(
+    `Halo Palu Dev House, saya tertarik dengan paket ${tier.name}. Boleh minta estimasi?`,
+  );
   const popular = Boolean(tier.popular);
-  const { qualifier, currency, amount } = parsePrice(tier.price);
 
   // "Semua fitur Starter" is an inheritance statement, not a feature. Pulling it
   // out of the tick list makes the ladder between tiers legible at a glance and
@@ -62,7 +49,6 @@ export function PricingTable({ tier, index }: PricingTableProps) {
       viewport={{ once: true, amount: 0.15 }}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.4, delay: index * 0.06 }}
-      // min-w-0 keeps a long price from forcing the grid column wider than its track.
       className={`min-w-0 h-full ${popular ? 'lg:-mt-4' : ''}`}
     >
       <div
@@ -88,20 +74,7 @@ export function PricingTable({ tier, index }: PricingTableProps) {
           )}
         </div>
 
-        <div className="mt-5">
-          {qualifier && (
-            <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-subtle">
-              {qualifier}
-            </div>
-          )}
-          <div className="flex items-baseline gap-1.5 whitespace-nowrap font-display font-semibold tracking-tight text-ink">
-            {currency && <span className="text-base text-ink-muted">{currency}</span>}
-            <span className="text-[28px] leading-none tabular-nums lg:text-2xl xl:text-[28px]">
-              {amount}
-            </span>
-          </div>
-          {tier.monthly && <div className="mt-2 text-sm text-ink-muted">+ {tier.monthly}</div>}
-        </div>
+        <p className="mt-3 text-sm leading-relaxed text-ink-muted">{tier.summary}</p>
 
         {inherited && (
           <p className="mt-5 flex items-center gap-2 rounded-md bg-surface-muted px-3 py-2 text-[13px] font-semibold text-ink">
@@ -135,7 +108,7 @@ export function PricingTable({ tier, index }: PricingTableProps) {
         </ul>
 
         <ButtonLink
-          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`}
+          href={href}
           target="_blank"
           rel="noopener noreferrer"
           variant={popular ? 'accent' : 'secondary'}

@@ -1,35 +1,42 @@
+/**
+ * What each package actually contains — the single source of truth for the
+ * offer, minus any figures.
+ *
+ * Prices used to live here and were rendered as a public ladder. They are gone
+ * on purpose: scope, not a number, is what a prospect needs to recognise their
+ * own situation in. Every card ends at WhatsApp, where the scope gets turned
+ * into a quote for that specific business.
+ */
+
 export type PackageCategory = 'landing' | 'webapp';
 
-export interface PricingTier {
+export interface PackageTier {
   id: string;
   name: string;
-  price: string;
-  priceNumeric: number;
-  monthly?: string;
-  monthlyNumeric?: number;
+  /** One line saying who this tier is for — the card's hook now the price is gone. */
+  summary: string;
   features: string[];
   popular?: boolean;
   ctaLabel: string;
 }
 
-export interface PricingPackage {
+export interface PackageGroup {
   category: PackageCategory;
   title: string;
   subtitle: string;
-  tiers: PricingTier[];
+  tiers: PackageTier[];
 }
 
-export const landingPackage: PricingPackage = {
+export const landingPackage: PackageGroup = {
   category: 'landing',
   title: 'Landing Page',
   subtitle:
-    'Landing page profesional + technical SEO & GEO (Generative Engine Optimization) bawaan — biar bisnismu kebaca Google sekaligus dikutip AI seperti ChatGPT, Gemini & Perplexity. Build sekali bayar. Harga belum termasuk domain: domain dibeli klien sendiri (kami bantu carikan & setup, mulai Rp 30rb/tahun). Hosting Indonesia tersedia sebagai add-on.',
+    'Landing page profesional + technical SEO & GEO (Generative Engine Optimization) bawaan — biar bisnismu kebaca Google sekaligus dikutip AI seperti ChatGPT, Gemini & Perplexity. Build sekali bayar. Domain dibeli klien sendiri (kami bantu carikan & setup) supaya kepemilikan 100% di tangan kamu; hosting Indonesia tersedia sebagai add-on.',
   tiers: [
     {
       id: 'landing-starter',
       name: 'Starter',
-      price: 'Rp 300.000',
-      priceNumeric: 300000,
+      summary: 'Buat yang baru mulai — satu halaman yang benar-benar kerja.',
       features: [
         '1 halaman landing responsive',
         'Mobile-first design',
@@ -39,13 +46,12 @@ export const landingPackage: PricingPackage = {
         'JSON-LD dasar (Organization + LocalBusiness) — fondasi GEO',
         'Revisi: 2x',
       ],
-      ctaLabel: 'Mulai dengan Starter',
+      ctaLabel: 'Tanya paket Starter',
     },
     {
       id: 'landing-pro',
       name: 'Pro',
-      price: 'Rp 400.000',
-      priceNumeric: 400000,
+      summary: 'Paling sering dipilih — siap tempur di Google sekaligus di jawaban AI.',
       popular: true,
       features: [
         'Semua fitur Starter',
@@ -56,13 +62,12 @@ export const landingPackage: PricingPackage = {
         'Animasi & motion design',
         'Revisi: 3x',
       ],
-      ctaLabel: 'Ambil paket Pro',
+      ctaLabel: 'Tanya paket Pro',
     },
     {
       id: 'landing-max',
       name: 'Max',
-      price: 'Rp 500.000',
-      priceNumeric: 500000,
+      summary: 'Paket terlengkap — SEO dan GEO digarap sampai tuntas.',
       features: [
         'Semua fitur Pro',
         'GEO lengkap: structured data penuh (Service / Offer / sameAs) + entity clarity',
@@ -73,23 +78,21 @@ export const landingPackage: PricingPackage = {
         'Page speed & Core Web Vitals tuning',
         'Revisi: unlimited hingga launch',
       ],
-      ctaLabel: 'Pilih paket Max',
+      ctaLabel: 'Tanya paket Max',
     },
   ],
 };
 
-export const webappPackage: PricingPackage = {
+export const webappPackage: PackageGroup = {
   category: 'webapp',
   title: 'Web Application',
-  subtitle: 'Aplikasi kasir, ERP, booking, sistem custom — estimasi build 1 bulan penuh. Hosting server Indonesia termasuk.',
+  subtitle:
+    'Aplikasi kasir, ERP, booking, sistem custom — estimasi build 1 bulan penuh. Hosting server Indonesia termasuk selama kontrak maintenance aktif.',
   tiers: [
     {
       id: 'webapp-pos',
       name: 'Standard POS/Kasir',
-      price: 'Rp 4.000.000',
-      priceNumeric: 4000000,
-      monthly: 'Rp 150.000/bulan',
-      monthlyNumeric: 150000,
+      summary: 'Kasir digital untuk satu outlet yang mulai kewalahan pakai catatan manual.',
       features: [
         '1 outlet',
         'Menu & produk management',
@@ -99,15 +102,12 @@ export const webappPackage: PricingPackage = {
         'Hosting server Indonesia + maintenance',
         'Estimasi build: 1 bulan penuh',
       ],
-      ctaLabel: 'Pilih paket POS',
+      ctaLabel: 'Tanya paket POS',
     },
     {
       id: 'webapp-erp',
       name: 'Pro ERP',
-      price: 'Rp 9.000.000',
-      priceNumeric: 9000000,
-      monthly: 'Rp 300.000/bulan',
-      monthlyNumeric: 300000,
+      summary: 'Satu dashboard untuk multi-outlet: stok, staff, dan angka penjualan.',
       popular: true,
       features: [
         'Multi-outlet',
@@ -118,15 +118,12 @@ export const webappPackage: PricingPackage = {
         'Hosting server Indonesia + maintenance',
         'Estimasi build: 1 bulan penuh',
       ],
-      ctaLabel: 'Pilih paket ERP',
+      ctaLabel: 'Tanya paket ERP',
     },
     {
       id: 'webapp-booking',
       name: 'Booking/Tuition',
-      price: 'Rp 6.000.000',
-      priceNumeric: 6000000,
-      monthly: 'Rp 200.000/bulan',
-      monthlyNumeric: 200000,
+      summary: 'Jadwal, pembayaran, dan notifikasi otomatis buat bisnis jasa & kursus.',
       features: [
         'Jadwal & booking online',
         'Payment gateway',
@@ -136,15 +133,12 @@ export const webappPackage: PricingPackage = {
         'Hosting server Indonesia + maintenance',
         'Estimasi build: 1 bulan penuh',
       ],
-      ctaLabel: 'Pilih paket Booking',
+      ctaLabel: 'Tanya paket Booking',
     },
     {
       id: 'webapp-enterprise',
       name: 'Enterprise',
-      price: 'Mulai Rp 15.000.000',
-      priceNumeric: 15000000,
-      monthly: 'Mulai Rp 500.000/bulan',
-      monthlyNumeric: 500000,
+      summary: 'Dibangun dari nol mengikuti alur kerja bisnismu, bukan sebaliknya.',
       features: [
         'Custom workflow & business logic',
         'Integrasi API pihak ketiga',
@@ -159,22 +153,4 @@ export const webappPackage: PricingPackage = {
   ],
 };
 
-export const allPackages: PricingPackage[] = [landingPackage, webappPackage];
-
-export const addOns = [
-  { label: 'Domain .my.id', price: 'Rp 30.000/tahun' },
-  { label: 'Domain .site', price: 'Rp 200.000/tahun' },
-  { label: 'Domain .com / .id', price: 'Rp 175.000 – Rp 350.000/tahun' },
-  { label: 'Shared hosting Indonesia', price: 'Mulai Rp 300.000/tahun' },
-  { label: 'VPS kecil (Biznet / IDCloudHost)', price: 'Mulai Rp 99.000/bulan' },
-  { label: 'VPS Alibaba Jakarta', price: 'Mulai Rp 200.000/bulan' },
-  { label: 'Railway Hobby (global CDN)', price: 'Mulai USD 5/bulan' },
-  { label: 'Revisi tambahan setelah launch', price: 'Rp 500.000/revisi' },
-  { label: 'Training aplikasi (2 jam)', price: 'Rp 1.000.000' },
-];
-
-export const paymentOptions = [
-  { label: '50% DP / 50% saat launch', detail: 'Pilihan paling umum, cocok untuk semua paket.' },
-  { label: '30% DP / 40% mid-project / 30% launch', detail: 'Cocok untuk proyek besar & Enterprise.' },
-  { label: 'Full upfront (diskon 10%)', detail: 'Bayar lunas di depan, hemat lebih banyak.' },
-];
+export const allPackages: PackageGroup[] = [landingPackage, webappPackage];

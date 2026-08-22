@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Container } from '../layout/Container';
+import { Card } from '../ui/Card';
 import { MotionSection } from '../ui/MotionSection';
 
 const reasons = [
@@ -17,33 +18,50 @@ const reasons = [
   },
 ];
 
+/**
+ * The credibility section, so it is deliberately the quietest of the three: no
+ * grid, no reveal-per-card choreography competing with the argument above it.
+ * The heading holds a sidebar and the three claims sit in a single raised slab
+ * as label/value rows — a spec sheet rather than three floating adjectives.
+ * `raised` because the band is muted; a `sunken` card would disappear into it.
+ */
 export function WhyUs() {
   return (
-    <MotionSection id="mengapa-kami" className="py-section-sm md:py-section">
+    <MotionSection
+      id="mengapa-kami"
+      className="border-b border-line bg-surface-muted py-section-sm md:py-section"
+    >
       <Container>
-        <div className="max-w-prose mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-ink">
+        <div className="max-w-prose">
+          <h2 className="text-balance font-display text-3xl font-semibold leading-[1.12] tracking-tight text-ink sm:text-4xl">
             Mengapa Palu Dev House
           </h2>
-          <p className="mt-4 text-ink-muted">
+          <p className="mt-4 leading-relaxed text-ink-muted">
             Tiga hal yang bikin kami beda dari freelance atau jasa biasa.
           </p>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+
+        <Card tone="raised" hoverable={false} className="mt-8 divide-y divide-line md:mt-10">
           {reasons.map((r, i) => (
             <motion.div
               key={r.title}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="border-l-2 border-brand pl-6"
+              className="grid gap-2 py-5 first:pt-0 last:pb-0 sm:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] sm:gap-10 sm:py-6"
             >
-              <h3 className="text-xl font-semibold text-ink">{r.title}</h3>
-              <p className="mt-3 text-ink-muted leading-relaxed">{r.body}</p>
+              <h3 className="flex items-start gap-2.5 font-display text-base font-semibold tracking-tight text-ink sm:text-lg">
+                <span
+                  aria-hidden="true"
+                  className="mt-[0.6rem] h-1.5 w-1.5 shrink-0 rounded-full bg-brand"
+                />
+                {r.title}
+              </h3>
+              <p className="leading-relaxed text-ink-muted">{r.body}</p>
             </motion.div>
           ))}
-        </div>
+        </Card>
       </Container>
     </MotionSection>
   );

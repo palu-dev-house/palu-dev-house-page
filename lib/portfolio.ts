@@ -14,6 +14,11 @@ export interface PortfolioItem {
 // deployment was decommissioned and the URL now 404s. Its successor, SkolFi,
 // runs on the school's own machine and has no public address yet; add it back
 // once it does.
+//
+// Order matters: the first entry is rendered as the feature card in the
+// Portfolio mosaic (components/sections/Portfolio.tsx) — twice the width of the
+// rest — so keep the strongest piece of work at the top. The mosaic is tuned
+// for five entries; adding a sixth leaves a half-width card on the last row.
 export const portfolioItems: PortfolioItem[] = [
   {
     name: 'Toko Ninja',
@@ -28,8 +33,13 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/portfolio/toko-ninja-pos.png',
   },
   {
-    name: 'Kontraktor Utama Indonesia',
-    url: 'https://kontraktorutamaindonesia.netlify.app/',
+    // Renamed + repointed 2026-08-22: the client's live site moved off the
+    // Netlify preview (kontraktorutamaindonesia.netlify.app) to their own
+    // domain, and the company is "Konstruksi" — not "Kontraktor". The image
+    // filename still says kontraktor-; it is only an asset path, left alone
+    // because public/ is not owned here.
+    name: 'Konstruksi Utama Indonesia',
+    url: 'https://www.konstruksiutamaindonesia.com/',
     category: 'Company Profile',
     image: '/portfolio/kontraktor-utama.png',
   },

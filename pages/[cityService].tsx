@@ -4,7 +4,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/layout/Container';
-import { PricingTable } from '@/components/ui/PricingTable';
+import { PackageCard } from '@/components/ui/PackageCard';
 import { ButtonLink } from '@/components/ui/Button';
 import {
   cityPages,
@@ -12,8 +12,8 @@ import {
   getAllCityPageSlugs,
   type CityPage,
 } from '@/lib/cityPages';
-import { landingPackage, webappPackage } from '@/lib/pricing';
-import { WHATSAPP_NUMBER } from '@/lib/contact';
+import { landingPackage, webappPackage } from '@/lib/packages';
+import { whatsappLink } from '@/lib/contact';
 import {
   buildMeta,
   faqJsonLd,
@@ -69,17 +69,18 @@ export default function CityServicePage({ page, otherCities }: Props) {
             }
           : {}),
       },
+      // Offers without a price: the packages are real and worth declaring, but
+      // a figure in structured data would outlive the page and keep the answer
+      // engines quoting a number the site itself no longer shows.
       offers: tiers.map((t) => ({
         '@type': 'Offer',
         name: t.name,
-        price: String(t.priceNumeric),
-        priceCurrency: 'IDR',
-        url: `${SITE_URL}/harga`,
+        url: `${SITE_URL}/${page.slug}`,
       })),
     },
   ];
 
-  const whatsappText = encodeURIComponent(
+  const waHref = whatsappLink(
     `Halo Palu Dev House, saya tertarik ${page.title.toLowerCase()}. Mau konsultasi.`
   );
 
@@ -124,7 +125,7 @@ export default function CityServicePage({ page, otherCities }: Props) {
                   Ikuti Quiz Rekomendasi
                 </ButtonLink>
                 <ButtonLink
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`}
+                  href={waHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="secondary"
@@ -192,7 +193,7 @@ export default function CityServicePage({ page, otherCities }: Props) {
           </Container>
         </section>
 
-        {/* Pricing snapshot */}
+        {/* Package snapshot */}
         <section className="py-section-sm bg-surface-muted">
           <Container>
             <div className="max-w-prose mx-auto text-center">
@@ -202,7 +203,8 @@ export default function CityServicePage({ page, otherCities }: Props) {
                   : 'Paket Landing Page'}
               </h2>
               <p className="mt-2 text-sm text-ink-muted">
-                Harga transparan — semua include technical SEO atau hosting server Indonesia.
+                Isi tiap paket, apa adanya — semua sudah include technical SEO atau hosting server
+                Indonesia. Estimasi biayanya kami hitung sesuai kebutuhan bisnismu.
               </p>
             </div>
             <div
@@ -213,16 +215,18 @@ export default function CityServicePage({ page, otherCities }: Props) {
               }`}
             >
               {tiers.map((tier, i) => (
-                <PricingTable key={tier.id} tier={tier} index={i} />
+                <PackageCard key={tier.id} tier={tier} index={i} />
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Link
-                href="/harga"
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-brand hover:underline"
               >
-                Lihat harga lengkap + add-ons →
-              </Link>
+                Minta estimasi untuk bisnismu →
+              </a>
             </div>
           </Container>
         </section>

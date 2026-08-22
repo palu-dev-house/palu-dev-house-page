@@ -116,7 +116,6 @@ export function localBusinessJsonLd() {
         addressCountry: 'ID',
       },
     ],
-    priceRange: 'Rp 300.000 – Rp 15.000.000+',
     knowsAbout: [
       'Jasa Buat Web',
       'Jasa Buat Aplikasi',
@@ -130,6 +129,8 @@ export function localBusinessJsonLd() {
       'Generative Engine Optimization',
       'GEO',
     ],
+    // Catalogue of what we do, with no figures attached — the offer is real,
+    // the number is quoted per project over WhatsApp.
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Layanan Palu Dev House',
@@ -142,11 +143,6 @@ export function localBusinessJsonLd() {
             areaServed: 'Indonesia',
             serviceType: 'Web Development',
           },
-          priceSpecification: {
-            '@type': 'PriceSpecification',
-            priceCurrency: 'IDR',
-            price: '300000',
-          },
         },
         {
           '@type': 'Offer',
@@ -156,11 +152,6 @@ export function localBusinessJsonLd() {
             areaServed: 'Indonesia',
             serviceType: 'Application Development',
           },
-          priceSpecification: {
-            '@type': 'PriceSpecification',
-            priceCurrency: 'IDR',
-            price: '4000000',
-          },
         },
         {
           '@type': 'Offer',
@@ -169,11 +160,6 @@ export function localBusinessJsonLd() {
             name: 'Jasa Buat Sistem & Program Custom',
             areaServed: 'Indonesia',
             serviceType: 'Custom Software Development',
-          },
-          priceSpecification: {
-            '@type': 'PriceSpecification',
-            priceCurrency: 'IDR',
-            price: '15000000',
           },
         },
       ],
@@ -207,7 +193,11 @@ export function faqJsonLd(items: { question: string; answer: string }[]) {
 
 /**
  * Dedicated Service schema for GEO — gives AI engines a clean, citable entity
- * for "Generative Engine Optimization" tied to our brand, area, and price.
+ * for "Generative Engine Optimization" tied to our brand and service area.
+ *
+ * No price, deliberately. Structured data outlives the page it sits on: a
+ * `priceSpecification` here would keep Google and the answer engines quoting a
+ * figure the site itself no longer shows.
  */
 export function geoServiceJsonLd() {
   return {
@@ -227,16 +217,8 @@ export function geoServiceJsonLd() {
     ],
     offers: {
       '@type': 'Offer',
-      priceCurrency: 'IDR',
-      price: '400000',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        priceCurrency: 'IDR',
-        minPrice: '300000',
-        maxPrice: '500000',
-      },
       availability: 'https://schema.org/InStock',
-      url: `${SITE_URL}/#harga`,
+      url: `${SITE_URL}/#kontak`,
     },
   };
 }

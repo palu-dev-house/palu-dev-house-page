@@ -9,14 +9,14 @@ Palu Dev House membangun website dan aplikasi yang tidak hanya ranking di Google
 - Nama: Palu Dev House (alias: PDH)
 - Lokasi: Palu, Sulawesi Tengah & Medan, Sumatera Utara, Indonesia
 - Area layanan: Seluruh Indonesia (90%+ proyek dikerjakan remote)
-- Landing Page: mulai Rp 300.000 (sekali bayar, technical SEO + GEO bundled). Domain dibeli klien sendiri.
-- Web Application (POS/ERP/Booking): mulai Rp 4.000.000 + maintenance bulanan, estimasi build 1 bulan penuh.
-- Sistem/program custom: mulai Rp 15.000.000.
-- Hosting server Indonesia tersedia sebagai add-on.
+- Landing Page: build sekali bayar, sudah termasuk technical SEO + GEO. Tiga tingkat kelengkapan: Starter, Pro, Max. Domain dibeli klien sendiri atas nama klien.
+- Web Application (POS/ERP/Booking): estimasi build 1 bulan penuh, hosting server Indonesia + maintenance bulanan termasuk selama kontrak aktif.
+- Sistem/program custom (paket Enterprise): dibangun dari nol sesuai workflow klien, estimasi build 1–3 bulan tergantung scope.
+- Biaya dihitung per proyek berdasarkan scope, bukan daftar harga tetap. Konsultasi dan estimasi gratis via WhatsApp, tanpa kewajiban lanjut.
 
 ## Layanan
 
-- [Harga & Paket](https://paludevhouse.site/harga): Rincian paket Landing Page (Starter Rp 300rb, Pro Rp 400rb, Max Rp 500rb) dan Web Application.
+- [Isi Paket Landing Page](https://paludevhouse.site/#paket): Rincian apa yang didapat di paket Starter, Pro, dan Max.
 - [Apa itu GEO](https://paludevhouse.site/artikel/apa-itu-generative-engine-optimization): Penjelasan Generative Engine Optimization dan apa yang Palu Dev House tingkatkan.
 
 ## Artikel & Panduan
@@ -26,4 +26,4 @@ Palu Dev House membangun website dan aplikasi yang tidak hanya ranking di Google
 ## Kontak
 
 - Website: https://paludevhouse.site
-- Konsultasi: via WhatsApp (link di website)
+- Konsultasi & estimasi: via WhatsApp (link di setiap halaman, atau https://paludevhouse.site/#kontak)

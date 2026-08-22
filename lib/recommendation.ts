@@ -68,8 +68,9 @@ export interface Recommendation {
   packageId: string;
   headline: string;
   reason: string;
-  priceLabel: string;
-  scrollTo: 'pricing';
+  /** What to do next, in the visitor's words — the result used to end on a price. */
+  nextStep: string;
+  scrollTo: 'paket';
 }
 
 export function recommend(answers: QuizAnswers): Recommendation {
@@ -82,8 +83,9 @@ export function recommend(answers: QuizAnswers): Recommendation {
         headline: 'Paket yang cocok: Landing Page Starter',
         reason:
           'Bisnis kamu butuh presence digital yang profesional dulu. Landing Page Starter sudah cukup untuk bangun kepercayaan pelanggan dan tampil di Google — technical SEO + fondasi GEO sudah include di paket.',
-        priceLabel: 'Rp 300.000',
-        scrollTo: 'pricing',
+        nextStep:
+          'Chat WhatsApp dengan nama bisnismu dan 3-5 hal yang mau tampil di halaman — kami balas dengan estimasi biaya dan timeline-nya.',
+        scrollTo: 'paket',
       };
     }
     return {
@@ -91,8 +93,9 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Landing Page Pro',
       reason:
         'Kamu belum punya presence digital dan mau jangkau pelanggan baru. Landing Page Pro punya technical SEO on-page, Google Analytics, dan schema markup supaya cepat naik di Google.',
-      priceLabel: 'Rp 400.000',
-      scrollTo: 'pricing',
+      nextStep:
+        'Chat WhatsApp dan cerita siapa pelanggan yang mau kamu jangkau — kami hitung scope-nya lalu kirim estimasi lengkap.',
+      scrollTo: 'paket',
     };
   }
 
@@ -103,8 +106,9 @@ export function recommend(answers: QuizAnswers): Recommendation {
         headline: 'Paket yang cocok: Enterprise',
         reason:
           'Skala bisnis kamu sudah besar dan mau jangkau daerah baru. Paket Enterprise ideal untuk custom workflow, mobile app, dan integrasi API pihak ketiga.',
-        priceLabel: 'Mulai Rp 15.000.000 + Mulai Rp 500.000/bulan',
-        scrollTo: 'pricing',
+        nextStep:
+          'Chat WhatsApp dan ceritakan alur kerja yang mau diotomatiskan. Kami mapping prosesnya dulu, baru keluar estimasi dan timeline.',
+        scrollTo: 'paket',
       };
     }
     return {
@@ -112,8 +116,9 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Pro ERP',
       reason:
         'Multi-outlet atau volume transaksi tinggi butuh sistem terpadu: inventory, staff, laporan analytics. Pro ERP jawab semua itu dalam satu dashboard — hosting server Indonesia sudah termasuk.',
-      priceLabel: 'Rp 9.000.000 + Rp 300.000/bulan',
-      scrollTo: 'pricing',
+      nextStep:
+        'Chat WhatsApp dengan jumlah outlet dan modul yang kamu butuh — estimasi build dan maintenance kami kirim setelah briefing singkat.',
+      scrollTo: 'paket',
     };
   }
 
@@ -123,8 +128,9 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Booking/Tuition App',
       reason:
         'Bisnis jasa atau edukasi paling butuh sistem booking online & notifikasi otomatis. Pelanggan bisa pesan tanpa chat manual, kamu fokus deliver.',
-      priceLabel: 'Rp 6.000.000 + Rp 200.000/bulan',
-      scrollTo: 'pricing',
+      nextStep:
+        'Chat WhatsApp dan cerita alur booking bisnismu sekarang — kami susun scope-nya lalu kirim estimasi.',
+      scrollTo: 'paket',
     };
   }
 
@@ -134,8 +140,9 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Landing Page Max',
       reason:
         'Kamu sudah punya website dan mau dapat lebih banyak pelanggan. Landing Page Max punya technical SEO + GEO lengkap, keyword & conversational query research, structured data penuh, akses AI crawler, dan Core Web Vitals tuning.',
-      priceLabel: 'Rp 500.000',
-      scrollTo: 'pricing',
+      nextStep:
+        'Chat WhatsApp dengan alamat website kamu sekarang — kami audit sekilas, lalu kirim estimasi untuk upgrade-nya.',
+      scrollTo: 'paket',
     };
   }
 
@@ -145,8 +152,9 @@ export function recommend(answers: QuizAnswers): Recommendation {
       headline: 'Paket yang cocok: Standard POS/Kasir',
       reason:
         'Untuk cafe atau retail skala kamu, Standard POS sudah cukup: kasir digital, laporan otomatis, cetak struk. Bisa di-upgrade ke Pro ERP kalau bisnis berkembang.',
-      priceLabel: 'Rp 4.000.000 + Rp 150.000/bulan',
-      scrollTo: 'pricing',
+      nextStep:
+        'Chat WhatsApp dengan jenis outlet dan jumlah item di menu kamu — estimasi build dan maintenance kami kirim balik.',
+      scrollTo: 'paket',
     };
   }
 
@@ -155,7 +163,8 @@ export function recommend(answers: QuizAnswers): Recommendation {
     headline: 'Paket yang cocok: Landing Page Pro',
     reason:
       'Untuk bisnis kamu, mulai dari Landing Page Pro paling masuk akal: website profesional dengan technical SEO on-page, bisa di-expand ke aplikasi nanti kalau skala bertambah.',
-    priceLabel: 'Rp 225.000',
-    scrollTo: 'pricing',
+    nextStep:
+      'Chat WhatsApp dan cerita singkat soal bisnismu — kami bantu pastikan paketnya pas sebelum kirim estimasi.',
+    scrollTo: 'paket',
   };
 }

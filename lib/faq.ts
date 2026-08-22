@@ -9,20 +9,20 @@ export const faqItems: FAQItem[] = [
     answer: 'Ya, kami melayani jasa buat web & jasa buat aplikasi untuk klien di Medan (Sumatera Utara), Palu (Sulawesi Tengah), dan seluruh Indonesia. Tim kami berbasis di 2 kota tersebut, tapi 90%+ proyek dikerjakan remote — meeting via Google Meet, delivery via email/WhatsApp. Untuk klien Medan & Palu, meeting offline bisa diatur kalau diperlukan.',
   },
   {
-    question: 'Berapa harga jasa buat web & jasa buat aplikasi di Palu Dev House?',
-    answer: 'Landing Page Rp 300rb (Starter), Rp 400rb (Pro), Rp 500rb (Max) — sekali bayar, technical SEO + GEO (Generative Engine Optimization) bundled. Harga belum termasuk domain; domain dibeli klien sendiri dan kami bantu setup. Aplikasi web (POS/ERP/booking) mulai Rp 4 juta + maintenance bulanan Rp 150rb–Rp 500rb tergantung paket, estimasi build 1 bulan penuh. Jasa buat sistem custom atau program khusus mulai Rp 15 juta. Semua harga transparan di halaman /harga — tidak ada biaya tersembunyi.',
+    question: 'Bagaimana cara tahu biaya untuk proyek saya?',
+    answer: 'Kami hitung per proyek, bukan pakai daftar harga gelondongan — karena landing page 1 halaman dan aplikasi kasir multi-outlet jelas beda beban kerjanya. Chat WhatsApp, cerita jenis bisnis dan apa yang mau dicapai, lalu kami balas dengan scope dan estimasi biaya + timeline yang jelas. Konsultasi dan estimasi gratis, tanpa kewajiban lanjut. Setelah deal, angkanya dikunci di invoice — tidak ada biaya tersembunyi di tengah jalan.'
   },
   {
     question: 'Berapa lama proses pembuatan website atau aplikasi?',
     answer: 'Landing Page Starter 5–7 hari kerja, Pro 10–14 hari. Web App (POS/ERP/Booking) estimasi 1 bulan penuh untuk build & QA. Paket Enterprise 1–3 bulan tergantung scope. Setiap proyek akan dapat timeline detail setelah briefing awal.',
   },
   {
-    question: 'Apakah harga sudah termasuk domain dan hosting?',
-    answer: 'Domain dibeli klien sendiri (atas nama kamu, jadi kepemilikan 100% di tangan kamu) — kami bantu carikan & setup, mulai Rp 30rb/tahun untuk .my.id sampai Rp 175rb–350rb/tahun untuk .com/.id. Hosting tersedia sebagai add-on (shared hosting Indonesia mulai Rp 300rb/tahun atau VPS). Harga paket Landing Page (Rp 300rb–500rb) sudah termasuk build + technical SEO + GEO, tapi di luar biaya domain & hosting. Web App include hosting selama ada kontrak maintenance bulanan.',
+    question: 'Apakah domain dan hosting sudah termasuk?',
+    answer: 'Domain dibeli klien sendiri, atas nama kamu — jadi kepemilikan 100% di tangan kamu dan kami bantu carikan serta setup-nya. Biaya domain dibayar langsung ke registrar, di luar paket. Untuk Landing Page, paketnya mencakup build + technical SEO + GEO; hosting tersedia sebagai add-on (shared hosting Indonesia atau VPS) dan kami bantu pilihkan yang sesuai skala kamu. Untuk Web App, hosting server Indonesia sudah include selama kontrak maintenance bulanan aktif.'
   },
   {
     question: 'Apa itu GEO (Generative Engine Optimization) dan apakah sudah termasuk?',
-    answer: 'GEO (Generative Engine Optimization) adalah optimasi konten supaya bisnismu dikutip dan direkomendasikan AI seperti ChatGPT, Google Gemini, dan Perplexity — bukan cuma ranking di Google. GEO sudah bundled di paket Landing Page: mulai paket Pro (Rp 400rb) dapat GEO starter (llms.txt + struktur Q&A citable + schema FAQ/Article), dan paket Max (Rp 500rb) dapat GEO lengkap (structured data penuh, akses AI crawler seperti GPTBot/ClaudeBot/PerplexityBot/Google-Extended, konten citable, dan E-E-A-T signal).',
+    answer: 'GEO (Generative Engine Optimization) adalah optimasi konten supaya bisnismu dikutip dan direkomendasikan AI seperti ChatGPT, Google Gemini, dan Perplexity — bukan cuma ranking di Google. GEO sudah bundled di paket Landing Page: paket Pro dapat GEO starter (llms.txt + struktur Q&A citable + schema FAQ/Article), dan paket Max dapat GEO lengkap (structured data penuh, akses AI crawler seperti GPTBot/ClaudeBot/PerplexityBot/Google-Extended, konten citable, dan E-E-A-T signal). Semua paket, termasuk Starter, sudah dapat fondasi JSON-LD-nya.'
   },
   {
     question: 'Apa bedanya SEO dan GEO?',
@@ -30,7 +30,7 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: 'Bagaimana sistem pembayarannya?',
-    answer: 'Kami fleksibel: 50% DP + 50% saat launch, atau 30/40/30, atau full upfront dengan diskon 10%. Transfer bisa via BCA atau QRIS. Invoice resmi akan dikirim via email/WhatsApp.',
+    answer: 'Kami fleksibel: 50% DP + 50% saat launch, atau 30/40/30 untuk proyek besar, atau lunas di depan kalau kamu mau — bayar penuh di awal dapat potongan. Transfer bisa via BCA atau QRIS. Invoice resmi akan dikirim via email/WhatsApp sebelum kerja dimulai.'
   },
   {
     question: 'Ada garansi kalau ada bug atau masalah setelah launch?',
@@ -38,7 +38,7 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: 'Kalau mau revisi setelah launch gimana?',
-    answer: 'Revisi minor tetap di-handle selama masa garansi 30 hari. Setelah itu, revisi berbayar Rp 500rb/revisi atau bisa di-bundle dalam paket maintenance bulanan.',
+    answer: 'Revisi minor tetap di-handle gratis selama masa garansi 30 hari. Setelah itu, revisi jadi pekerjaan berbayar per permintaan — atau bisa di-bundle dalam paket maintenance bulanan supaya lebih tenang. Kami kasih estimasi dulu sebelum ngerjain, jadi tidak ada kejutan.'
   },
   {
     question: 'Apakah Palu Dev House bisa kerja dengan klien luar Palu/Medan?',
@@ -50,6 +50,6 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: 'Bisakah nanti upgrade dari paket Landing Page ke Web App?',
-    answer: 'Bisa. Banyak klien mulai dari Landing Page dulu untuk establish online presence, lalu upgrade ke Web App saat bisnis tumbuh. Harga upgrade dihitung selisih + migration fee yang wajar.',
+    answer: 'Bisa. Banyak klien mulai dari Landing Page dulu untuk establish online presence, lalu upgrade ke Web App saat bisnis tumbuh. Biaya upgrade dihitung dari selisih scope-nya, bukan dari nol lagi — plus migration fee yang wajar. Kerja yang sudah dibayar tidak hangus.'
   },
 ];

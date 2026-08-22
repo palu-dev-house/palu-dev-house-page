@@ -8,7 +8,7 @@ import { WhyUs } from '@/components/sections/WhyUs';
 import { Services } from '@/components/sections/Services';
 import { Recommendation } from '@/components/sections/Recommendation';
 import { Portfolio } from '@/components/sections/Portfolio';
-import { Pricing } from '@/components/sections/Pricing';
+import { Packages } from '@/components/sections/Packages';
 import { FAQ } from '@/components/sections/FAQ';
 import { Contact } from '@/components/sections/Contact';
 import { buildMeta, localBusinessJsonLd, webSiteJsonLd, faqJsonLd, geoServiceJsonLd } from '@/lib/seo';
@@ -18,7 +18,7 @@ export default function Home() {
   const meta = buildMeta({
     title: 'Jasa Buat Web & Aplikasi (SEO + GEO) — Medan, Palu, Indonesia',
     description:
-      'Jasa buat web & jasa buat aplikasi Medan, Palu, seluruh Indonesia. Landing page mulai Rp 300rb dengan technical SEO + GEO (Generative Engine Optimization) bawaan — dikutip ChatGPT, Gemini & Perplexity. Aplikasi POS kasir, ERP, booking mulai Rp 4 juta (estimasi build 1 bulan penuh), dan jasa buat sistem custom mulai Rp 15 juta. Domain dibeli terpisah, hosting server Indonesia tersedia.',
+      'Jasa buat web & jasa buat aplikasi Medan, Palu, seluruh Indonesia. Landing page dengan technical SEO + GEO (Generative Engine Optimization) bawaan — dikutip ChatGPT, Gemini & Perplexity. Aplikasi POS kasir, ERP, booking dengan estimasi build 1 bulan penuh, plus jasa buat sistem custom. Domain dibeli terpisah, hosting server Indonesia tersedia. Konsultasi & estimasi gratis via WhatsApp.',
     path: '/',
   });
 
@@ -61,7 +61,7 @@ export default function Home() {
         <Services />
         <Recommendation />
         <Portfolio />
-        <Pricing />
+        <Packages />
         <FAQ />
         <Contact />
       </main>
