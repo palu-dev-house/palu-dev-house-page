@@ -12,13 +12,14 @@ export interface PortfolioItem {
 //
 // Removed 2026-08-22: "Tuition App" (tuition-app.up.railway.app) — the Railway
 // deployment was decommissioned and the URL now 404s. Its successor, SkolFi,
-// runs on the school's own machine and has no public address yet; add it back
-// once it does.
+// was added 2026-08-26 once it got a public Vercel address.
 //
 // Order matters: the first entry is rendered as the feature card in the
 // Portfolio mosaic (components/sections/Portfolio.tsx) — twice the width of the
-// rest — so keep the strongest piece of work at the top. The mosaic is tuned
-// for five entries; adding a sixth leaves a half-width card on the last row.
+// rest — so keep the strongest piece of work at the top. The mosaic has
+// explicit spans for the first five entries; any beyond that fall back to
+// half-width, so keep the count odd (5, 7, ...) to avoid a lone card on the
+// last row.
 export const portfolioItems: PortfolioItem[] = [
   {
     name: 'Toko Ninja',
@@ -54,5 +55,19 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://hinno.art/',
     category: 'Portfolio Site',
     image: '/portfolio/hinno-art.png',
+  },
+  {
+    name: 'Bloomwell Allied Health',
+    url: 'https://bloom-well-delta.vercel.app/',
+    category: 'Clinic Website',
+    image: '/portfolio/bloom-well.png',
+  },
+  {
+    // The public URL lands on the sign-in screen (Kasir SPP), which is what
+    // the screenshot shows; the app itself sits behind school credentials.
+    name: 'SkolFi',
+    url: 'https://skolfi.vercel.app/',
+    category: 'School Tuition App',
+    image: '/portfolio/skolfi.png',
   },
 ];
