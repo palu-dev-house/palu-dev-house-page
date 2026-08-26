@@ -63,8 +63,8 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/portfolio/bloom-well.png',
   },
   {
-    // The public URL lands on the sign-in screen (Kasir SPP), which is what
-    // the screenshot shows; the app itself sits behind school credentials.
+    // The public URL lands on a sign-in screen, so the screenshot is the
+    // admin dashboard captured from a local build with seeded data.
     name: 'SkolFi',
     url: 'https://skolfi.vercel.app/',
     category: 'School Tuition App',
