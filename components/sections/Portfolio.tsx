@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from '../layout/Container';
 import { MotionSection } from '../ui/MotionSection';
-import { portfolioItems } from '@/lib/portfolio';
+import { portfolioItems, myKenanganDetails } from '@/lib/portfolio';
 
 /**
  * This is the proof section — the one place a prospect can look at real work
@@ -76,7 +76,7 @@ export function Portfolio() {
                   'hover:border-brand-400 hover:shadow-lg focus-visible:outline-none ' +
                   'focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 ' +
                   'focus-visible:ring-offset-surface-muted ' +
-                  (spans[i] ?? FALLBACK_SPAN)
+                  (i === portfolioItems.length - 1 && i >= 5 && i % 2 === 1 ? 'sm:col-span-2 lg:col-span-6' : (spans[i] ?? FALLBACK_SPAN))
                 }
               >
                 {/* aspect-[16/10] is the natural ratio of the sources and acts as
@@ -87,7 +87,7 @@ export function Portfolio() {
                     src={item.image}
                     alt={`Preview ${item.name}`}
                     fill
-                    sizes={imageSizes[i] ?? FALLBACK_SIZES}
+                    sizes={i === portfolioItems.length - 1 && i >= 5 && i % 2 === 1 ? '92vw' : (imageSizes[i] ?? FALLBACK_SIZES)}
                     className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                   />
                   <div
@@ -129,6 +129,46 @@ export function Portfolio() {
             );
           })}
         </div>
+        <article aria-labelledby="mykenangan-title" className="mt-8 overflow-hidden rounded-2xl border border-line bg-surface">
+          <div className="p-6 md:p-10">
+            <p className="text-sm font-medium text-brand">Project pilihan · Wedding Photo Sharing</p>
+            <div className="mt-3 flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+              <div className="max-w-prose">
+                <h3 id="mykenangan-title" className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">MyKenangan</h3>
+                <p className="mt-4 leading-relaxed text-ink-muted">{myKenanganDetails.description}</p>
+              </div>
+              <a href="https://mykenangan.com" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center justify-center rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+                Buka mykenangan.com ↗
+              </a>
+            </div>
+            <h4 className="mt-8 text-lg font-semibold text-ink">Fitur dan pengalaman tamu</h4>
+            <ul className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {myKenanganDetails.features.map((feature) => (
+                <li key={feature.title} className="border-t border-line pt-4">
+                  <h5 className="font-semibold text-ink">{feature.title}</h5>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{feature.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="border-t border-line bg-surface-muted p-6 md:p-10">
+            <h4 className="text-lg font-semibold text-ink">Lihat tampilan produknya</h4>
+            <p className="mt-2 text-sm text-ink-muted">Screenshot halaman utama dan alur masuk tamu. Pilih gambar untuk melihat ukuran penuh.</p>
+            <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {myKenanganDetails.screenshots.map((screenshot, index) => (
+                <figure key={screenshot.src} className={index === 0 ? 'md:col-span-2' : ''}>
+                  <a href={screenshot.src} target="_blank" rel="noopener noreferrer" aria-label={`Lihat screenshot ${screenshot.title} dalam ukuran penuh (tab baru)`} className="flex h-[360px] items-center justify-center overflow-hidden rounded-xl border border-line bg-white p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+                    <Image src={screenshot.src} alt={screenshot.description} width={screenshot.width} height={screenshot.height} sizes={index === 0 ? '(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 560px' : '(max-width: 768px) 100vw, 280px'} className="h-full w-full object-contain" />
+                  </a>
+                  <figcaption className="mt-3">
+                    <p className="font-semibold text-ink">{screenshot.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink-muted">{screenshot.description}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </article>
       </Container>
     </MotionSection>
   );
